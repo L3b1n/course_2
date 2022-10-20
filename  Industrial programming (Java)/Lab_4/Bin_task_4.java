@@ -138,7 +138,7 @@ public class Bin_task_4
         System.out.println("_________________________________");
 
         System.out.println("Lambda collections sort: ");
-        Collections.sort(list, (o1, o2) -> String.valueOf(o1.charAt(0)).compareTo(String.valueOf(o2.charAt(0))));
+        Collections.sort(list, (o1, o2) -> String.valueOf(o1.length()).compareTo(String.valueOf(o2.length())));
         System.out.println(list);
     }
-} 
+}
