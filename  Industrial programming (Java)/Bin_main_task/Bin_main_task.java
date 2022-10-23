@@ -1,19 +1,20 @@
 import java.io.*;
-import java.util.Scanner;
+import java.util.*;
 
 public class Bin_main_task 
 {
     static int REGS = 4;
+    static String regs_names = new String();
 
-    public static StringBuilder Reader(File xmlFile) throws Exception
+    public static String[] Reader(File xmlFile) throws Exception
     {
         int i = 0;
         FileReader input = new FileReader(xmlFile);
-        StringBuilder temp = new StringBuilder();
+        String[] temp = new String[256];
         Scanner scan = new Scanner(input);
         while(scan.hasNextLine()) 
         {
-            temp.append(scan.nextLine() + ((scan.hasNextLine() != false) ? "\n" : ""));
+            temp[i++] = scan.nextLine().toLowerCase();
         }
         input.close();
         return temp;
@@ -144,10 +145,32 @@ public class Bin_main_task
         return temp;
     }
 
-    public static int[][] DoIt()
+    public static int[][] DoIt(String[] temp)
     {
         int [][]matrix = Identity();
-        return matrix;
+        int [][]current = new int[REGS + 1][REGS + 1];
+        for(int i = 0; i < REGS; i++)
+        {
+            regs_names[i] = String.valueOf(i + Integer.valueOf('a'));
+        }
+        int i = 0;
+        while(true)
+        {
+            String[] tokens = new String[10];
+            tokens = temp[i++].split(" ");
+            if(tokens[0] == "loop")
+            {
+                current = Pow(DoIt(temp), Integer.valueOf(tokens[1]));
+            }
+            else if(tokens[0] == "end")
+            {
+                return matrix;
+            }
+            else
+            {
+                int first_index = regs_names;
+            }
+        }
     }
  
     public static void main(String[] args) throws Exception
@@ -156,8 +179,9 @@ public class Bin_main_task
         File xmlFileInput = new File(fileInputPath);
         String fileOutputPath = "output.txt";
         File xmlFileOutput = new File(fileOutputPath);
+        // DoIt(Reader(xmlFileInput));
         // System.out.println(REGS);
         // Identity();
-        Writer(Reader(xmlFileInput).toString(), xmlFileOutput);
+        // Writer(Reader(xmlFileInput).toString(), xmlFileOutput);
     }
 }
