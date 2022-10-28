@@ -11,7 +11,8 @@ int main()
     cin >> n;
     vector<int> arr1;
     for(int i = 0, x; i < n; i++){ cin >> x; arr1.push_back(x);}
-    vector<int> arr2 = { std::istream_iterator<int>(cin), std::istream_iterator<int>()};
+    vector<int> arr2;// = { std::istream_iterator<int>(cin), std::istream_iterator<int>()};
+    for(int i = 0, x; i < n; i++){ cin >> x; arr2.push_back(x);}
     vector<vector<int>> arr(n + 1, vector<int>(n + 1)); 
     for(int j = 1; j < n + 1; j++)
     {
@@ -31,7 +32,7 @@ int main()
         result2.push_back(j - 1);
     }
     cout << arr[n][n] << endl;
-    if(result1[0] != -1){ std::copy(result1.rbegin(), --result1.rend(), std::ostream_iterator<int>(cout, " ")); cout << result1[0] << endl;}
-    if(result2[0] != -1){ std::copy(result2.rbegin(), --result2.rend(), std::ostream_iterator<int>(cout, " ")); cout << result2[0];}
+    if(result1.size() != 0){ std::copy(result1.rbegin(), --result1.rend(), std::ostream_iterator<int>(cout, " ")); cout << result1[0] << endl;}
+    if(result1.size() != 0){ std::copy(result2.rbegin(), --result2.rend(), std::ostream_iterator<int>(cout, " ")); cout << result2[0];}
     return 0;
 }
