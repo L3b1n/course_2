@@ -7,7 +7,7 @@ public class Bin_task_5
 {
     public static String isTrue(String text) 
     {
-        Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+        Pattern pattern = Pattern.compile("^[^z0-9\\.-]+\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*\\.\\w{2,4}");
         Matcher matcher = pattern.matcher(text);
         if(matcher.find()){ return "True";} 
         else{ return "False";}
@@ -18,7 +18,8 @@ public class Bin_task_5
         FileReader input = new FileReader("input.txt");
         FileWriter output = new FileWriter("output.txt");
         Scanner scan = new Scanner(input);
-        while(scan.hasNextLine()){ output.write(isTrue(scan.nextLine()) + "\n");}
+        String temp = new String();
+        while(scan.hasNextLine()){ temp = scan.nextLine(); output.write(temp + " : " + isTrue(temp) + "\n");}
         input.close();
         output.close();
     }

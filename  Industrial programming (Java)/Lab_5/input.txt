@@ -1,3 +1,7 @@
+-test4@test.by
+.test4@test.by
+44test@test.by
+fpmi@bsu.by
 test@yandex.ru
 test-27@yandex.com
 test.27@yandex.com
