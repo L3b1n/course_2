@@ -15,10 +15,9 @@ int main()
     in >> n;
     std::vector<int> arr;
     for(;n;){ arr.push_back(n & 1); n >>= 1;}
-    std::copy(arr.rbegin(), arr.rend(), std::ostream_iterator<int>(cout)); out << endl;
     std::for_each(arr.begin(), arr.end(), 
         [&i](int temp){ 
-            if(temp == 1){ out << i << endl;}
+            if(temp == 1){ ::out << i << endl;}
             i++;
         }
     );
