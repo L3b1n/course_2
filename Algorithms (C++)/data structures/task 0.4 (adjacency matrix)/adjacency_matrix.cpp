@@ -11,6 +11,7 @@ int main()
     ofstream out("output.txt");
     ios_base::sync_with_stdio(0);
     in.tie(0);
+    out.tie(0);
     int n, m, i = 0;
     in >> n >> m;
     std::vector<std::vector<bool>> answer(n, std::vector<bool>(n, 0));
