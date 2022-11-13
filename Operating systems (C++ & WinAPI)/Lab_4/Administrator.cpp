@@ -25,20 +25,19 @@ int main()
 	std::cout << "Input number of process you want to start: ";
 	std::cin >> numberOfProcess;
 
-	HANDLE hSemaphore = CreateSemaphore(NULL, 5, 5, L"Semaphore");
-	STARTUPINFO* Pstp = new STARTUPINFO[numberOfProcess], * Chstp = new STARTUPINFO[numberOfProcess];
-	PROCESS_INFORMATION* Ppi = new PROCESS_INFORMATION[numberOfProcess], * Chpi = new PROCESS_INFORMATION[numberOfProcess];
+	HANDLE hSemaphore = CreateSemaphore(NULL, 3, 3, L"Semaphore");
+	STARTUPINFO *Wstp = new STARTUPINFO[numberOfProcess], *Rstp = new STARTUPINFO[numberOfProcess];
+	PROCESS_INFORMATION *Wpi = new PROCESS_INFORMATION[numberOfProcess], *Rpi = new PROCESS_INFORMATION[numberOfProcess];
 
 	for(int i = 0; i < numberOfProcess; ++i) 
     {
-		ZeroMemory(&Pstp[i], sizeof(STARTUPINFO));
-		Pstp[i].cb = sizeof(STARTUPINFO);
-		ZeroMemory(&Chstp[i], sizeof(STARTUPINFO));
-		Chstp[i].cb = sizeof(STARTUPINFO);
-		wstring writer = L"Writer.exe",
-		reader = L"Reader.exe";
-		CreateProcess(NULL, &writer[0], NULL, NULL, FALSE, CREATE_NEW_CONSOLE, NULL, NULL, &Pstp[i], &Ppi[i]);
-		CreateProcess(NULL, &reader[0], NULL, NULL, FALSE, CREATE_NEW_CONSOLE, NULL, NULL, &Chstp[i], &Chpi[i]);
+		ZeroMemory(&Wstp[i], sizeof(STARTUPINFO));
+		Wstp[i].cb = sizeof(STARTUPINFO);
+		ZeroMemory(&Rstp[i], sizeof(STARTUPINFO));
+		Rstp[i].cb = sizeof(STARTUPINFO);
+		wstring writer = L"Writer.exe", reader = L"Reader.exe";
+		CreateProcess(NULL, &writer[0], NULL, NULL, FALSE, CREATE_NEW_CONSOLE, NULL, NULL, &Wstp[i], &Wpi[i]);
+		CreateProcess(NULL, &reader[0], NULL, NULL, FALSE, CREATE_NEW_CONSOLE, NULL, NULL, &Rstp[i], &Rpi[i]);
 	}
 
 	int counter = 1;
@@ -46,24 +45,12 @@ int main()
     {
 		while(true) 
         {
-			DWORD mes = WaitForMultipleObjects(3, Writer, FALSE, INFINITE);
-			SetEvent(Reader[mes]);
-			if(mes == WAIT_OBJECT_0) 
-            {
-				DWORD mes1 = WaitForMultipleObjects(2, Exit, FALSE, INFINITE);
-				if(mes1 == WAIT_OBJECT_0) 
-                {
-					std::cout << "Reader " << counter << " ended his work\n";
-					counter += 1;
-				}
-				break;
-			}
-			// std::wcout << L"Received : " << WriterMes[mes] + 2 << L'\n';
 			DWORD mes1 = WaitForMultipleObjects(2, Exit, FALSE, INFINITE);
 			if(mes1 == WAIT_OBJECT_0) 
-            {
+			{
 				std::cout << "Reader " << counter << " ended his work\n";
 				counter += 1;
+				break;
 			}
 		}
 		std::cout << "Writer " << i + 1 << " ended his work\n";
@@ -79,10 +66,10 @@ int main()
 
 	for(int i = 0; i < numberOfProcess; i++) 
     {
-		CloseHandle(Ppi[i].hThread);
-		CloseHandle(Ppi[i].hProcess);
-		CloseHandle(Chpi[i].hThread);
-		CloseHandle(Chpi[i].hProcess);
+		CloseHandle(Wpi[i].hThread);
+		CloseHandle(Wpi[i].hProcess);
+		CloseHandle(Rpi[i].hThread);
+		CloseHandle(Rpi[i].hProcess);
 	}
 
 	CloseHandle(hSemaphore);
