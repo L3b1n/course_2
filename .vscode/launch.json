@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": true,
       "externalConsole": false,
-      "cwd": "/Users/leonid/Desktop/course_2/Algorithms (C++)/data structures/task 0.2 (roads destruction)",
-      "program": "/Users/leonid/Desktop/course_2/Algorithms (C++)/data structures/task 0.2 (roads destruction)/build/Debug/outDebug",
+      "cwd": "/Users/leonid/Desktop/course_2/Algorithms (C++)/data structures/task 0.8 (BFS)",
+      "program": "/Users/leonid/Desktop/course_2/Algorithms (C++)/data structures/task 0.8 (BFS)/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb"
     }
