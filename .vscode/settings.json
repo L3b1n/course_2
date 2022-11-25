@@ -71,7 +71,8 @@
     "utility": "cpp",
     "unordered_set": "cpp",
     "queue": "cpp",
-    "filesystem": "cpp"
+    "filesystem": "cpp",
+    "list": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "gcc",
