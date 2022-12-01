@@ -308,7 +308,7 @@ class Matrix
 {
 public:
     Matrix() : n(0), size(0ll), sum(0ll) {}
-    Matrix(const long long _size, const long long temp = 1ll) : n(0), size(_size), sum(0ll)
+    Matrix(const long long _size, const long long temp = 1ll) : n(0), size(_size), sum(0ll) 
     {
         num.resize(size); for(int i = 0; i < size; i++){ num[i].swap(*(new std::vector<long long>(size, 0ll))); num[i][i] = temp;}
     }
