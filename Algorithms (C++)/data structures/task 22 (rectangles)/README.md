@@ -10,7 +10,7 @@
 
 Начало системы координат находится в центре листа, а оси параллельны краям листа. Ось $O_x$ идёт слева направо, ось $O_y$ проходит снизу вверх. Левый нижний угол имеет координаты $(−w / 2, −h / 2)$, а правый верхний угол — координаты $(w / 2, h / 2)$.
 
-<img src="/Users/leonid/Desktop/course_2/Algorithms (C++)/data structures/task 22 (rectangles)/rec_20.png" width="454" height="286"/>
+<img src="task 22 (rectangles)/rec_20.png" width="454" height="286"/>
 
 # Формат входных данных
 
