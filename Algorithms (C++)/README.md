@@ -22,5 +22,6 @@
    * [task 0.4 (Binomial heap)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%200.4%20(binomial%20heap) "task 0.3 (Binomial heap)")
    * [task 0.5 (Hash table)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%200.5%20(hash%20table) "task 0.5 (Hash table)")
    * [task 0.6 (Segment tree)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%200.6%20(segment%20tree) "task 0.6 (Segment tree)")
+   * [task 22 (Rectangles)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%2022%20(rectangles) "task 22 (Rectangles")
    * [task 43.1 (Coding of Huffman)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%2043.1%20(coding%20of%20huffman) "task 43.1 (Coding of Huffman)")
    * [task 43.2 (Huffman coding)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%2043.2%20(huffman%20coding) "task 43.2 (Huffman coding)")
