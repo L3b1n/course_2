@@ -1,0 +1,22 @@
+-test4@test.by
+.test4@test.by
+44test@test.by
+fpmi@bsu.by
+test@yandex.ru
+test-27@yandex.com
+test.27@yandex.com
+test111@devcolibri.com
+test.100@devcolibri.com.ua
+test@1.com
+test@gmail.com.com
+test+27@gmail.com
+test-27@yandex-test.com
+bug@@@com.ru
+@val.ru
+Just Text2
+val@val 
+val@val.a.a.a.a 
+12323123@111[]][]
+mail@mail.ru
+valid@megapochta.com
+aa@aa.info

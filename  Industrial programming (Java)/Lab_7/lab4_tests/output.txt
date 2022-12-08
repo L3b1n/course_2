@@ -1,0 +1,22 @@
+-test4@test.by : false
+.test4@test.by : false
+44test@test.by : false
+fpmi@bsu.by : true
+test@yandex.ru : true
+test-27@yandex.com : true
+test.27@yandex.com : true
+test111@devcolibri.com : true
+test.100@devcolibri.com.ua : true
+test@1.com : true
+test@gmail.com.com : true
+test+27@gmail.com : true
+test-27@yandex-test.com : true
+bug@@@com.ru : false
+@val.ru : false
+Just Text2 : false
+val@val  : false
+val@val.a.a.a.a  : false
+12323123@111[]][] : false
+mail@mail.ru : true
+valid@megapochta.com : true
+aa@aa.info : true
