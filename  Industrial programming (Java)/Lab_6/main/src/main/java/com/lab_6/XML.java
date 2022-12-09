@@ -18,23 +18,23 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class XML {
-    private static Node getLanguage(Document doc, String firstName, String lastName, String age) {
-        Element person = doc.createElement("Person");
-        person.appendChild(getLanguageElements(doc, person, "firstName", firstName));
-        person.appendChild(getLanguageElements(doc, person, "lastName", lastName));
-        person.appendChild(getLanguageElements(doc, person, "age", age));
-        return person;
+    private static Node getLanguage(Document doc, Integer X, Integer Y) {
+        Element point = doc.createElement("Point");
+        point.appendChild(getLanguageElements(doc, point, "X", X));
+        point.appendChild(getLanguageElements(doc, point, "Y", Y));
+        return point;
     }
 
-    private static Node getLanguageElements(Document doc, Element element, String name, String value) {
+    private static Node getLanguageElements(Document doc, Element element, String name, Integer value) {
         Element node = doc.createElement(name);
-        node.appendChild(doc.createTextNode(value));
+        node.appendChild(doc.createTextNode(Integer.toString(value)));
         return node;
     }
 
-    public static ArrayList<Person> ReadFromFileXML(String filename) throws FileNotFoundException, XMLStreamException {
+    public static HashMap<Integer, Point> ReadFromXML(String filename) throws FileNotFoundException, XMLStreamException {
         ArrayList<String> r = new ArrayList<>();
         XMLInputFactory factory = XMLInputFactory.newInstance();
         XMLStreamReader reader = factory.createXMLStreamReader(new FileReader(filename));
@@ -47,33 +47,33 @@ public class XML {
             }
         }
 
-        ArrayList<Person> result = new ArrayList<>();
-        for(int i = 0; i < r.size(); i += 3) {
-            result.add(new Person(r.get(i), r.get(i + 1), r.get(i + 2)));
+        HashMap<Integer, Point> result = new HashMap<>();
+        for(int i = 0, j = 0; i < r.size(); i += 2) {
+            result.put(j++, new Point(Integer.parseInt(r.get(i)), Integer.parseInt(r.get(i + 1))));
         }
         return result;
     }
 
-    public static void WriteInFileXML(ArrayList<Person> people) throws ParserConfigurationException, TransformerException {
+    public static void WriteInFileXML(HashMap<Integer, Point> points) throws ParserConfigurationException, TransformerException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
 
         builder = factory.newDocumentBuilder();
         Document document = builder.newDocument();
 
-        Element element = document.createElement("Persons");
+        Element element = document.createElement("points");
 
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 
         DOMSource source = new DOMSource(document);
-        StreamResult result = new StreamResult(new File("out_file.xml"));
+        StreamResult result = new StreamResult(new File("output.xml"));
 
         document.appendChild(element);
-        element.appendChild(XML.getLanguage(document, people.get(0).getFirstName(), people.get(0).getLastName(), people.get(0).getAge()));
-        for(int i = 1; i < people.size(); ++i) {
-            element.appendChild(XML.getLanguage(document, people.get(i).getFirstName(), people.get(i).getLastName(), people.get(i).getAge()));
+        element.appendChild(XML.getLanguage(document, points.get(0).getX(), points.get(0).getY()));
+        for(int i = 1; i < points.size(); ++i) {
+            element.appendChild(XML.getLanguage(document, points.get(i).getX(), points.get(i).getY()));
         }
         transformer.transform(source, result);
     }

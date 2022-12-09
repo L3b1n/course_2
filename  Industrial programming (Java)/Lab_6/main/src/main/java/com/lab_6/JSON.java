@@ -1,9 +1,9 @@
 package com.lab_6;
 
 import java.io.FileReader;
-// import java.io.FileWriter;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -11,45 +11,42 @@ import org.json.simple.parser.JSONParser;
 
 public class JSON {
     
-    public static ArrayList<Person> ReadFromJSON(String filename) {
-        ArrayList<Person> people = new ArrayList<>();
+    public static HashMap<Integer, Point> ReadFromJSON(String filename) {
+        HashMap<Integer, Point> points = new HashMap<>();
         JSONParser jsonParser = new JSONParser();
         try {
             JSONArray list = (JSONArray) jsonParser.parse(new FileReader(filename));
             for(int i = 0; i < list.size(); ++i) {
                 JSONObject object = (JSONObject) list.get(i);
-                String firstName = (String) object.get("firstName");
-                String lastName = (String) object.get("lastName");
-                String age = (String) object.get("age");
-                Person person = new Person(firstName, lastName, age);
-                people.add(person);
+                Integer X = Integer.parseInt(object.get("X: ").toString());
+                Integer Y = Integer.parseInt(object.get("Y: ").toString());
+                // Integer Y = (Integer) object.get("Y: ");
+                Point temp_point = new Point(X, Y);
+                points.put(i, temp_point);
             }
         } catch (IOException | org.json.simple.parser.ParseException ex) {
             throw new RuntimeException(ex);
         }
-        return people;
+        return points;
     }
 
-    // public static void WriteInFileJSON(ArrayList<Person> p) throws IOException {
-    //     private static FileWriter writer = new FileWriter("out_file.json");
-    //     JSONArray obj = new JSONArray();
-    //     writer.write("[ ");
-    //     for(int i = 0; i < p.size(); ++i) {
-    //         if(i + 1 == p.size()) {
-    //             JSONObject object = new JSONObject();
-    //             object.put("firstName", p.get(i).getFirstName());
-    //             object.put("lastName", p.get(i).getLastName());
-    //             object.put("age", p.get(i).getAge());
-    //             writer.write(object.toJSONString());
-    //             break;
-    //         }
-    //         JSONObject object = new JSONObject();
-    //         object.put("firstName", p.get(i).getFirstName());
-    //         object.put("lastName", p.get(i).getLastName());
-    //         object.put("age", p.get(i).getAge());
-    //         writer.write(object.toJSONString() + ", ");
-    //     }
-    //     writer.write(" ]");
-    //     writer.flush();
-    // }
+    public static void WriteInFileJSON(HashMap<Integer, Point> temp) throws IOException {
+        FileWriter writer = new FileWriter("output.json");
+        writer.write("[ ");
+        for(int i = 0; i < temp.size(); ++i) {
+            if(i + 1 == temp.size()) {
+                JSONObject object = new JSONObject();
+                object.put("X: ", temp.get(i).getX());
+                object.put("Y: ", temp.get(i).getY());
+                writer.write(object.toJSONString());
+                break;
+            }
+            JSONObject object = new JSONObject();
+            object.put("X: ", temp.get(i).getX());
+            object.put("Y: ", temp.get(i).getY());
+            writer.write(object.toJSONString() + ", ");
+        }
+        writer.write(" ]");
+        writer.close();
+    }
 }
