@@ -4,12 +4,9 @@
 #include <fstream>
 #include <sstream>
 
-using namespace std;
+// using namespace std;
 
 typedef int int128_t __attribute__((mode(TI)));
-
-ifstream in("input.txt", ios::out);
-ofstream out("output.txt");
 
 namespace dma
 {
@@ -162,7 +159,7 @@ std::ostream& operator << (std::ostream& fo, const my_long& bi)
         if(bi.sign){ fo << '-';}
         fo << bi.value.back();
         char old_fill = fo.fill('0');
-        for(long long i = static_cast<long long>(bi.value.size()) - 2; i >= 0; --i){ fo << setw(9) << bi.value[i];}
+        for(long long i = static_cast<long long>(bi.value.size()) - 2; i >= 0; --i){ fo << std::setw(9) << bi.value[i];}
         fo.fill(old_fill);
     }
     return fo;
@@ -370,7 +367,7 @@ public:
 
     void Solution()
     {
-        out << dma::pow(*this, m - 1ll).Sum();
+        std::cout << dma::pow(*this, m - 1ll).Sum();
     }
 
     bool Bit_check(const long long& temp, const int& index)
@@ -392,7 +389,7 @@ public:
 
     friend std::istream& operator >> (std::istream& fi, Matrix& a)
     {
-        string temp;
+        std::string temp;
         long long i = 0ll;
         fi >> temp >> a.n;
         my_long m1(temp); a.m += m1;
@@ -414,8 +411,8 @@ public:
 
     friend std::ostream& operator << (std::ostream& fo, Matrix a)
     {
-        fo << a.sum << endl;
-        for_each(a.num.begin(), a.num.end(), [&fo](const std::vector<long long>& vec){ std::copy(vec.begin(), vec.end(), std::ostream_iterator<long long>(fo, "  ")); fo << endl;});
+        fo << a.sum << "\n";
+        for_each(a.num.begin(), a.num.end(), [&fo](const std::vector<long long>& vec){ std::copy(vec.begin(), vec.end(), std::ostream_iterator<long long>(fo, "  ")); fo << "\n";});
         return fo;
     }
 
@@ -430,8 +427,13 @@ private:
 
 int main()
 {
+    std::ios_base::sync_with_stdio(0);
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    std::cin.tie(0);
+    std::cout.tie(0);
     Matrix a;
-    in >> a;
+    std::cin >> a;
     a.Solution();
     return 0;
 }
