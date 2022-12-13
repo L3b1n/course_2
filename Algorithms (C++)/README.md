@@ -10,11 +10,13 @@
    * [task 0.2 (Combination part 1)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%200.2%20(combination%20(1%20part)) "task 0.2 (Combination part 1)")
    * [task 0.3 (Combination part 2)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%200.3%20(combination%20(2%20part)) "task 0.3 (Combination part 3)")
    * [task 6 (Strictly increasing sequence without gaps)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%206%20(strictly%20increasing%20sequence%20without%20gaps) "task 6 (Strictly increasing sequence without gaps)")
+   * [task 18 (Files)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2018%20(files) "task 18 (Files)")
    * [task 20 (Palindrome)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2020%20(Palindrome) "task 20 (Palindrome)")
    * [task 25 (String conversion)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2025%20(string%20conversion) "task 25 (String conversion)")
    * [task 28 (Phone)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2028%20(phone) "task 25 (Phone)")
    * [task 35.2 (Cute pattern)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2035.2%20(cute%20pattern) "task 35.2 (Cute pattern)")
    * [task 69.1 (Frog)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2069.1%20(frog) "task 69.1 (Frog)")
+   * [task 82.1 (Dividing sequence)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2082.1%20(dividing%20sequence) "task 82.1 (Dividing sequence")
    * [task 93 (LCS)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2093%20(LCS) "task 93 (LCS)")
 3. Data structures
    * [task 0.2 (Task of sum, sqrt-decomposition)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%200.2%20(task%20of%20sum) "task 0.2 (Task of sum, sqrt-decomposition)")
