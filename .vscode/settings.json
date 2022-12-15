@@ -73,7 +73,9 @@
     "queue": "cpp",
     "filesystem": "cpp",
     "list": "cpp",
-    "__memory": "cpp"
+    "__memory": "cpp",
+    "thread": "cpp",
+    "condition_variable": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "gcc",
