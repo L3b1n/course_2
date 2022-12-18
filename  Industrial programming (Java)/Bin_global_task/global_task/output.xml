@@ -4,8 +4,6 @@
         <Result1>1.2186948853615522</Result1>
         <Result2>-333.0</Result2>
         <Result3>12.0</Result3>
-        <Result4>12.0</Result4>
-        <Result5>12.0</Result5>
     </expressions>
     <expressions>
         <Result1>-29.0</Result1>
@@ -20,11 +18,6 @@
     <expressions>
         <Result1>11.0</Result1>
         <Result2>-534.0</Result2>
-        <Result3>12.0</Result3>
-    </expressions>
-    <expressions>
-        <Result1>9.0</Result1>
-        <Result2>-322.0</Result2>
         <Result3>12.0</Result3>
     </expressions>
 </ExpressionList>

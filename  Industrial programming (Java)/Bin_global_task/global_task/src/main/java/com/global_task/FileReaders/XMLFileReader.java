@@ -103,7 +103,9 @@ public class XMLFileReader extends FileReaderInfo {
                 String calculatedLine = Calculation.CalculationOfLine(line);
                 calculated.get(i).add(calculatedLine);
             }
-            calculated.add(++i, new ArrayList<>());
+            if(i + 1 != readFile.size()) {
+                calculated.add(++i, new ArrayList<>());
+            }
         }
         return calculated;
     }
