@@ -29,11 +29,11 @@ public class Calculation {
         while(reader.hasNextLine()) {
             String line = reader.nextLine();
             String calculatedLine = CalculationOfLine(line);
-            ((OutputStreamWriter) outputFile).write(calculatedLine + "\n");
+            ((OutputStreamWriter) outputFile).write(calculatedLine);
         }
         ((OutputStreamWriter) outputFile).close();
         reader.close();
     }
 
-    private static final String devisionError = "\nError: devision by zero\n";
+    private static final String devisionError = "Error: devision by zero";
 }
