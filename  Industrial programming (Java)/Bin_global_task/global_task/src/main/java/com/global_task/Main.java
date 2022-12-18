@@ -14,11 +14,14 @@ public class Main {
     // private static final String JsonInputFileName = "input.json";
     // private static final String JsonOutputFileName = "output.json";
 
-    // private static final String XmlInputFileName = "input.xml";
+    private static final String XmlInputFileName = "input.xml";
     // private static final String XmlOutputFileName = "output.xml";
     
     public static void main(String[] args) throws IOException {
-        TXTFileReader temp = new TXTFileReader(TxtInputFileName);
-        temp.getResult(TxtOutputFileName);
+        TXTFileReader tempTxt = new TXTFileReader(TxtInputFileName);
+        tempTxt.getResult(TxtOutputFileName);
+        
+        TXTFileReader tempXml = new TXTFileReader(XmlInputFileName);
+        tempXml.getResult(TxtOutputFileName);
     }
 }

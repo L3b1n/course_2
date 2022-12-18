@@ -5,7 +5,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
-// import java.util.Scanner;
 
 import com.global_task.StringParsers.Calculation;
 
@@ -15,24 +14,23 @@ public class TXTFileReader extends FileReaderInfo {
     }
 
     // @Override
-    public void Write(ArrayList<String> result, String outputFileName) throws IOException {
-        FileWriter writer = new FileWriter(outputFileName);
-        for(int i = 0; i < result.size(); i++) {
-            writer.write(result.get(i));
-        }
-        writer.close();
-    }
-    
-    // @Override
     public ArrayList<String> Read() throws IOException {
-        FileReader fileReader = new FileReader(inputName);
         ArrayList<String> readFile = new ArrayList<>();
-        Scanner reader = new Scanner(fileReader);
+        Scanner reader = new Scanner(new FileReader(inputName));
         while(reader.hasNextLine()) {
             readFile.add(reader.nextLine() + "\n");
         }
         reader.close();
         return readFile;
+    }
+
+    // @Override
+    public void Write(ArrayList<String> result, String outputFileName) throws IOException {
+        FileWriter writer = new FileWriter(outputFileName);
+        for(int i = 0; i < result.size(); i++) {
+            writer.write(result.get(i) + "\n");
+        }
+        writer.close();
     }
 
     // @Override
