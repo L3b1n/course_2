@@ -23,7 +23,7 @@
 });
 </script> -->
 
-<div class="lang_buttons">
+<!-- <div class="lang_buttons">
   <a href="#" class="button rus_lang">
 	  Английский
 	</a>
@@ -41,7 +41,7 @@
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos itaque illo quod, similique, architecto. Quis praesentium, qui, pariatur reprehenderit necessitatibus nemo! Id, culpa, sapiente. Nam, officia vitae natus doloremque!</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos itaque illo quod, similique, architecto. Quis praesentium, qui, pariatur reprehenderit necessitatibus nemo! Id, culpa, sapiente. Nam, officia vitae natus doloremque!</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos itaque illo quod, similique, architecto. Quis praesentium, qui, pariatur reprehenderit necessitatibus nemo! Id, culpa, sapiente. Nam, officia vitae natus doloremque!</p>
-</div>
+</div> -->
 
 <!-- <!DOCTYPE html>
 <html >
