@@ -1,25 +1,16 @@
-<nav class="site-nav">
-  <ul id="navigation">
-    <li data-menuanchor="about-us">
-      <a href="#about-us" data-lang="about_academy">Про академию</a>
-    </li>
-    <li data-menuanchor="what-we-offer">
-      <a href="#what-we-offer" data-lang="proposal">Что мы предлагаем</a>
-    </li>
-    <li data-menuanchor="your-benefits">
-      <a href="#your-benefits" data-lang="your_result">Что ты получишь</a>
-    </li>
-    <li data-menuanchor="our-blog">
-      <a href="#our-blog" data-lang="blog">Блог</a>
-    </li>
-    <li data-menuanchor="testimonials">
-      <a href="#testimonials" data-lang="feedback">Отзывы</a>
-    </li>
-    <li data-menuanchor="contacts">
-      <a href="#contacts" data-lang="contacts">Контакты</a>
-    </li>
-    <li class="language-switcher-wrapper">
-      <button class="language-switcher ua">UA</button>
-    </li>
-  </ul>
-</nav>
+<select name="" id="input0" required="required" style="background-image:url(images/lng_ru.png);">
+    <option  style="background-image:url(images/lng_ru.png);" value="rus">rus</option>
+    <option  style="background-image:url(images/lng_eng.png);" value="eng">eng</option>
+</select>
+
+<script>
+$('#input0').click(function() {
+ if($("select#input0 :selected").val() == "rus") {
+    $("select#input0").attr('style', 'background-image:url(images/lng_ru.png);');
+ }
+ if($("select#input0 :selected").val() == "eng") {
+    $("select#input0").attr('style', 'background-image:url(images/lng_eng.png);');
+ }
+    console.log('select color: '+$("select#input0 :selected").val());
+});
+</script>
