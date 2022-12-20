@@ -74,12 +74,12 @@
 <div data-en="how are you" data-ru="как дела">как дела</div> -->
 
 <form name="form1"> 
- <input class="menubtm" type="button" name="formbutton1" value="Главная" onclick='toggle("form1");'> 
+ <input class="menubtm" type="button" name="formbutton1" value="Главная" onclick='toggle("form1");'"> 
  </form> 
  <div id='conten'></div> 
 
  <form name="form2"> 
- <input class="menubtm" type="button" name="formbutton2" value="Главная" onclick='toggle("form2");'> 
+ <input class="menubtm" type="button" name="formbutton2" value="Главная" onclick='toggle("form2");'"> 
  </form>
  <div id='conten'></div> 
 
