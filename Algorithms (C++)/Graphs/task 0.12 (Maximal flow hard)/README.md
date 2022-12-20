@@ -42,3 +42,33 @@
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos itaque illo quod, similique, architecto. Quis praesentium, qui, pariatur reprehenderit necessitatibus nemo! Id, culpa, sapiente. Nam, officia vitae natus doloremque!</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos itaque illo quod, similique, architecto. Quis praesentium, qui, pariatur reprehenderit necessitatibus nemo! Id, culpa, sapiente. Nam, officia vitae natus doloremque!</p>
 </div>
+
+<!-- <!DOCTYPE html>
+<html >
+<head ></head>
+<body><select class="lang">
+    <option value="ru">ru</option>
+    <option value="ua">ua</option>
+    </select>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const select = document.querySelector(".lang");
+        if(!select.value) return;
+        if(${select.value} == "ru") {
+            <p>Привет</p>
+        }
+        if(${select.value} == "ua") {
+            <p>Hello</p>
+        }
+        }
+    );
+</script>
+</html> -->
+
+<button class="ru">RU</button>
+<button class="en">EN</button>
+<div data-en="Hello" data-ru="Привет">Привет</div>
+<div data-en="Bye" data-ru="Пока">Пока</div>
+<div data-en="how are you" data-ru="как дела">как дела</div>
