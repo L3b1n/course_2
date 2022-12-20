@@ -67,8 +67,30 @@
 </script>
 </html> -->
 
-<button class="ru">RU</button>
+<!-- <button class="ru">RU</button>
 <button class="en">EN</button>
 <div data-en="Hello" data-ru="Привет">Привет</div>
 <div data-en="Bye" data-ru="Пока">Пока</div>
-<div data-en="how are you" data-ru="как дела">как дела</div>
+<div data-en="how are you" data-ru="как дела">как дела</div> -->
+
+<form name="form1"> 
+ <input class="menubtm" type="button" name="formbutton1" value="Главная" onclick='toggle("form1");'> 
+ </form> 
+ <div id='conten'></div> 
+
+ <form name="form2"> 
+ <input class="menubtm" type="button" name="formbutton2" value="Главная" onclick='toggle("form2");'> 
+ </form>
+ <div id='conten'></div> 
+
+ <div id='form1' style='display: none'>КОНТЕНТ</div> 
+ <div id='form2' style='display: none'>КОНТЕНТ</div> 
+
+ <script type='text/javascript'>  
+  function toggle(id) {  
+  document.getElementById("conten").innerHTML = document.getElementById(id).innerHTML;  
+  }  
+  toggle("form1");  
+  </script>
+
+<button name="button" onclick="http://www.google.com">Click me</button>
