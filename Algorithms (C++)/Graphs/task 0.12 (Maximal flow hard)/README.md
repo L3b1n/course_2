@@ -1,4 +1,4 @@
-<!-- <style>
+<style>
 .del { display: none; }
 .del:not(:checked) + label + * { display: none; }
 .del:not(:checked) + label,
@@ -17,32 +17,13 @@ background: #e36443;
 
 <input type="checkbox" id="raz" class="del" checked="checked"/>
 <label for="raz" class="del">нажать</label>
-<div>исчезающий текст</div> -->
+<div>исчезающий текст</div>
 
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-<h1>Переключение текста</h1>
-
-<p>Нажмите кнопку, чтобы поменять местами текст элемента DIV:</p>
-
-<p><button onclick="myFunction()">Нажмите</button></p>
-
-<div id="myDIV">Привет</div>
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myDIV");
-  if (x.innerHTML === "Привет") {
-    x.innerHTML = "Замененный текст!";
-  } else {
-    x.innerHTML = "Привет";
-  }
-}
-</script>
-
-</body>
-</html>
+<details>
+    <summary>Toggle Switch</summary>
+    Foldable Content[enter image description here][1]
+</details>
+<details>
+    <summary>Toggle Switch</summary>
+    Foldable Content[enter image description here][1]
+</details>
