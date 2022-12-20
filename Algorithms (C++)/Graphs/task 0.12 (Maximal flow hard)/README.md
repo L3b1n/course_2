@@ -1,3 +1,4 @@
+<script>
 <style>
 .del { display: none; }
 .del:not(:checked) + label + * { display: none; }
@@ -14,6 +15,8 @@ cursor: pointer;
 background: #e36443;
 }
 </style>
+</script>
+
 <input type="checkbox" id="raz" class="del" checked="checked"/>
 <label for="raz" class="del">нажать</label>
 <div>исчезающий текст</div>
