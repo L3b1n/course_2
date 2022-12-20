@@ -1,7 +1,11 @@
-<div class="dropdown">
-  <div class="dropbtn">RU</div>
-  <div class="dropdown-content">
-    <a href="#">RU</a>
-    <a href="#">EN</a>
-  </div>
+BODY.en .ru,
+BODY.ru .en {
+  display: none
+}
+
+<div class="ru" lang="ru">
+  <p>Дизайн-бюро Артёма Горбунова...</p>
+</div>
+<div class="en" lang="en">
+  <p>Artem Gorbunov Design Bureau...</p>
 </div>
