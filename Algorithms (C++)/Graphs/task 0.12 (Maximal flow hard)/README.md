@@ -23,25 +23,36 @@
 });
 </script> -->
 
-<!-- <div class="lang_buttons">
-  <a href="#" class="button rus_lang">
+<div class="lang_buttons">
+  <a href="#" class="button en_lang">
 	  Английский
 	</a>
-	<a href="#" class="button en_lang">
+	<a href="#" class="button rus_lang">
 		Russian
 	</a>
 </div>
 
-<div class="rus_lang">
+<div id="rus_lang">
   <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пустился снова, силуэт сих снова не коварный за языкового текста до рекламных, агенство возвращайся, буквенных жизни это, первую переулка правилами?</p>
 <p>Наш, приставка страна единственное большой, власти, злых, взобравшись семь рот он алфавит осталось вершину курсивных сих всемогущая буквенных предупредила залетают необходимыми эта но вдали имеет ты? Предупреждал повстречался, но которое!</p>
 <p>Злых, знаках свою. Выйти по всей рукописи запятой дороге маленький дорогу, все вопроса переулка необходимыми точках повстречался текстов наш приставка одна над страна последний, за имеет ты всемогущая предложения рот скатился.</p>
 </div>
-<div class="en_lang">
+
+<div id="en_lang">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos itaque illo quod, similique, architecto. Quis praesentium, qui, pariatur reprehenderit necessitatibus nemo! Id, culpa, sapiente. Nam, officia vitae natus doloremque!</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos itaque illo quod, similique, architecto. Quis praesentium, qui, pariatur reprehenderit necessitatibus nemo! Id, culpa, sapiente. Nam, officia vitae natus doloremque!</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos itaque illo quod, similique, architecto. Quis praesentium, qui, pariatur reprehenderit necessitatibus nemo! Id, culpa, sapiente. Nam, officia vitae natus doloremque!</p>
-</div> -->
+</div>
+
+<script>
+$(function() {
+$("#id rus_lang").hide(); // скрываем элементы
+$(".id button rus_lang").on('click', function() { // указываем кнопку при клике на которую покажутся элементы
+$(" #id rus_land").show(); // показываем элементы
+ appNormalise();
+ }) 
+ });
+</script>
 
 <!-- <!DOCTYPE html>
 <html >
@@ -67,30 +78,10 @@
 </script>
 </html> -->
 
-<!-- <button class="ru">RU</button>
-<button class="en">EN</button>
+<!-- <a href=# class="ru">RU</a>
+<a href="#" class="en">EN</a>
 <div data-en="Hello" data-ru="Привет">Привет</div>
 <div data-en="Bye" data-ru="Пока">Пока</div>
-<div data-en="how are you" data-ru="как дела">как дела</div> -->
+<div data-en="how are you" data-ru="как дела">как дела</div>
 
-<form name="form1"> 
- <input class="menubtm" type="button" name="formbutton1" value="Главная" onclick='toggle("form1");'"> 
- </form> 
- <div id='conten'></div> 
-
- <form name="form2"> 
- <input class="menubtm" type="button" name="formbutton2" value="Главная" onclick='toggle("form2");'"> 
- </form>
- <div id='conten'></div> 
-
- <div id='form1' style='display: none'>КОНТЕНТ</div> 
- <div id='form2' style='display: none'>КОНТЕНТ</div> 
-
- <script type='text/javascript'>  
-  function toggle(id) {  
-  document.getElementById("conten").innerHTML = document.getElementById(id).innerHTML;  
-  }  
-  toggle("form1");  
-  </script>
-
-<button name="button" onclick="http://www.google.com">Click me</button>
+<button name="button" onclick="http://www.google.com">Click me</button> -->
