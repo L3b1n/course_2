@@ -79,7 +79,7 @@ int main()
 {
     std::ios_base::sync_with_stdio(0);
     freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
+    // freopen("output.txt", "w", stdout);
     std::cin.tie(0);
     std::cout.tie(0);
     std::cin >> count_summit >> count_edge;
@@ -93,7 +93,7 @@ int main()
         work_list.emplace_back(std::make_pair(begin, end), capacity, 0);
         network[end].push_back(work_list.size());
         work_list.emplace_back(std::make_pair(end, begin), 0, 0);
-    }
+    } 
     std::cout << MaximalFlow(0, count_summit - 1) << "\n";
     // std::for_each(work_list.begin(), work_list.end(), [](const Node& temp){ std::cout << temp.edge.first << " " << temp.capacity << " " << temp.flow << " " << temp.edge.second << "\n";});
     // std::for_each(network.begin(), network.end(), [](const std::vector<int>& vec){ std::copy(vec.begin(), vec.end(), std::ostream_iterator<int>(std::cout, " ")); std::cout << "\n";});
