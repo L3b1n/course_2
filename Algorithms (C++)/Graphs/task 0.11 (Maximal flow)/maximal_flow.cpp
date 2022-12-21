@@ -33,26 +33,6 @@ void BFS(int summit)
             }
         }
     );
-    // std::queue<int> temp;
-    // temp.push(summit);
-    // is_visited[summit] = true;
-    // while(!temp.empty())
-    // {
-    //     int i = 0;
-    //     std::for_each(network[temp.front()].begin(), network[temp.front()].end(), 
-    //         [&i, &temp](const int& temp_summit){
-    //             int end = work_list[temp_summit].edge.second;
-    //             if(!is_visited[end] && (work_list[temp_summit].capacity - work_list[temp_summit].flow) > 0)
-    //             { 
-    //                 priority[end] = temp_summit; 
-    //                 is_visited[end] = true;
-    //                 temp.push(i);
-    //             }
-    //             i++;
-    //         }
-    //     );
-    //     temp.pop();
-    // }
 }
 
 void BuildNetwork()
