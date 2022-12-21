@@ -35,3 +35,4 @@
    * [task 0.5 (Canonical view by arc list)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.5%20(canonical%20view%20by%20arc%20list) "task 0.5 (Canonical view by arc list")
    * [task 0.6 (Build an adjacency list)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.6%20(build%20an%20adjacency%20list) "task 0.6 (Build an adjacency list")
    * [task 0.7 (BFS)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.8%20(BFS) "task 0.7 (BFS)")
+   * [task 0.8 (DFS)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.9%20(DFS) "task 0.8 (DFS)")
