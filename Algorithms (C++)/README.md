@@ -33,3 +33,4 @@
    * [task 0.3 (Tough task of roads destruction)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.3%20(roads%20destruction) "task 0.3 (Tough task of roads destruction)")
    * [task 0.4 (Adjacency matrix)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.4%20(adjacency%20matrix) "task 0.4 (Adjacency matrix)")
    * [task 0.5 (Canonical view by arc list)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.5%20(canonical%20view%20by%20arc%20list) "task 0.5 (Canonical view by arc list")
+   * [task 0.6 (Build an adjacency list)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.6%20(build%20an%20adjacency%20list) "task 0.6 (Build an adjacency list")
