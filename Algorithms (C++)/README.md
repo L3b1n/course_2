@@ -29,3 +29,4 @@
    * [task 43.2 (Huffman coding)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%2043.2%20(huffman%20coding) "task 43.2 (Huffman coding)")
 4. Graphs
    * [task 0.1 (Roads 1)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.1%20(roads%201) "task 0.1 (Roads 1)")
+   * [task 0.2 (Roads destruction)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.2%20(roads%20destruction) "task 0.2 (Roads destruction")
