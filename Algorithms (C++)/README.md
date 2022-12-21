@@ -39,3 +39,4 @@
    * [task 0.9 (DFS)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.9%20(DFS) "task 0.9 (DFS)")
    * [task 0.10 (Dijkstra)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.10%20(Dijkstra) "task 0.10 (Dijkstra)")
    * [task 0.11 (Maximal flow)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.11%20(Maximal%20flow) "task 0.11 (Maximal flow)")
+   * [task 0.12 (Maximal flow hard)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.12%20(Maximal%20flow%20hard) "task 0.12 (Maximal flow hard)")
