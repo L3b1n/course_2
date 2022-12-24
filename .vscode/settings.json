@@ -75,7 +75,8 @@
     "list": "cpp",
     "__memory": "cpp",
     "thread": "cpp",
-    "condition_variable": "cpp"
+    "condition_variable": "cpp",
+    "__functional_03": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "gcc",
