@@ -45,7 +45,7 @@ public class JSONFileReader extends FileReaderInfo {
             int j = 1;
             HashMap<String, String> BlockOfResults = new HashMap<>(); 
             for(String line : lines) {
-                BlockOfResults.put("Result" + Integer.toString(j++), line);
+                BlockOfResults.put("Result_" + Integer.toString(j++), line);
             }
             JSONObject objectBlockOfResults = new JSONObject(BlockOfResults);
             if(i + 1 == result.size()) {
