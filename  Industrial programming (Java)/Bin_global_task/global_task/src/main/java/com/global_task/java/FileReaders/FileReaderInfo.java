@@ -16,12 +16,12 @@ public class FileReaderInfo implements InterfaceFileReader {
     }
 
     @Override
+    public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {}
+
+    @Override
     public ArrayList<ArrayList<String>> Read() throws Throwable { 
         return null;
     }
-
-    @Override
-    public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {}
 
     @Override
     public ArrayList<ArrayList<String>> Calculate(ArrayList<ArrayList<String>> readFile) throws Throwable { 
@@ -29,5 +29,11 @@ public class FileReaderInfo implements InterfaceFileReader {
     }
 
     @Override
+    public ArrayList<ArrayList<String>> Transform(ArrayList<ArrayList<String>> readFile) throws Throwable {
+        return readFile;
+    }
+
+    @Override
     public void getResult(String outputFileName) throws Throwable {}
+
 }
