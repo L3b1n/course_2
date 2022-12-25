@@ -1,0 +1,17 @@
+Builder part:
+
+Device [brand = ASUS, camera = Camera [amount = 4], size = Size [height = 12.0, lenght = 3.0, thickness = 2.0], color = RED, battery = Battery [capacity = 1400, ID = 123224]]
+Device [brand = APPLE, camera = Camera [amount = 4], size = Size [height = 3.0, lenght = 5.0, thickness = 6.0], color = BLUE, battery = Battery [capacity = 2200, ID = 2132312]]
+Device [brand = SAMSUNG, camera = Camera [amount = 5], size = Size [height = 32.0, lenght = 43.0, thickness = 54.0], color = BLUE, battery = Battery [capacity = 4400, ID = 1321231]]
+Device [brand = HUAWEI, camera = Camera [amount = 6], size = Size [height = 5.0, lenght = 4.0, thickness = 43.0], color = BLUE, battery = Battery [capacity = 1200, ID = 123123]]
+Device [brand = BLACKBERRY, camera = Camera [amount = 1], size = Size [height = 32.0, lenght = 43.0, thickness = 43.0], color = BLUE, battery = Battery [capacity = 3100, ID = 132123123]]
+Device [brand = HUAWEI, camera = Camera [amount = 6], size = Size [height = 5.0, lenght = 4.0, thickness = 43.0], color = BLUE, battery = Battery [capacity = 1200, ID = 123123]]
+
+Decorator part:
+
+Device [brand = APPLE, camera = Camera [amount = 4], size = Size [height = 3.0, lenght = 5.0, thickness = 6.0], color = BLUE, battery = Battery [capacity = 2200, ID = 2132312]]
+Device [brand = SAMSUNG, camera = Camera [amount = 5], size = Size [height = 32.0, lenght = 43.0, thickness = 54.0], color = BLUE, battery = Battery [capacity = 4400, ID = 1321231]]
+Device [brand = HUAWEI, camera = Camera [amount = 6], size = Size [height = 5.0, lenght = 4.0, thickness = 43.0], color = BLUE, battery = Battery [capacity = 1200, ID = 123123]]
+Device [brand = BLACKBERRY, camera = Camera [amount = 1], size = Size [height = 32.0, lenght = 43.0, thickness = 43.0], color = BLUE, battery = Battery [capacity = 3100, ID = 132123123]]
+Device [brand = HUAWEI, camera = Camera [amount = 6], size = Size [height = 5.0, lenght = 4.0, thickness = 43.0], color = BLUE, battery = Battery [capacity = 1200, ID = 123123]]
+Device [brand = APPLE, camera = Camera [amount = 4], size = Size [height = 3.0, lenght = 5.0, thickness = 6.0], color = BLUE, battery = Battery [capacity = 2200, ID = 2132312]]
