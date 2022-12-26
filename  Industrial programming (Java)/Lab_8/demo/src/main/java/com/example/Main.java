@@ -23,8 +23,6 @@ public class Main {
         Fabric Main = new Fabric();
         DeviceBuilder builder = new DeviceBuilder();
 
-        Main.createDevice(builder);
-
         Device[] device = new Device[DataBase.Data.size()];
 
         for(Device dev : device) {
