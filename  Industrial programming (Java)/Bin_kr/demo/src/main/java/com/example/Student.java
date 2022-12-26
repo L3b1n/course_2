@@ -20,7 +20,12 @@ public class Student {
         return studentFirstName + " " + studentLastName + " " + Double.toString(studentAmount) + " " + studentID + " " + fileName;
     }
 
-    public int compareTo(Student obj) {
-        return studentAmount.compareTo(obj.studentAmount);
+    public Integer compareTo(Student temp) {
+        Double item_0 = Double.valueOf(temp.studentAmount);
+        Double item_1 = Double.valueOf(this.studentAmount);
+        if(this.studentFirstName == temp.studentFirstName) {
+            return item_1.compareTo(item_0);
+        }
+        return this.studentFirstName.compareTo(temp.studentFirstName);
     }
 }

@@ -1,3 +1,15 @@
-Dubo1v Petrovich 7 343534645765745 ff.jpg
-Kuznecov Petrovich 5.0 898998963423412  f0976.png
-Baranov Pomanovich 9.8 3453464575678 f876.gif
+Dubov Petr 7;343534645765745 ff.jpg
+Kuznecov Sergey!5.0 898998963423412 f0976.png
+Baranov Victor 9.8 3453464575678 f876.gif
+Sidorov Evgeniy 11003e-2 2457867898 f23.jpg
+1Kozlov Victor 3.2 234345465765768 f1234.bmp
+Kozlov_Victor 3.4 2323453546546 f1230987.png
+Kovalev;Victor 96E-1 4654765767865_f12334.png
+Rukov Petr 1.1 3434543546546 f4.jpg
+Ivanov Petr;2.3 34354354687769879 f3.gif
+Petrov;Roman 7.0 1232242343545 f12334.bmp
+Petrov5 Roman 5 756766575452312;f765.gif
+Ivanov Petr_8.1;423242354345546 f1234.png
+Bar5anov Victor 9.8 3453464571678 f1234.bmp
+Vasilev3 Victor 9.0 2435434546456 f984.bmp
+Govorov Andrey_357e-2 12324325446546 f1234.gif
