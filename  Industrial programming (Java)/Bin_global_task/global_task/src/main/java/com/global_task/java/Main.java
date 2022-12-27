@@ -1,10 +1,10 @@
 package com.global_task.java;
 
 import com.global_task.java.FileReaders.FileBuilder;
-import com.global_task.contracts.Interface.InterfaceFileReader;
-import com.global_task.java.FileReaders.JSONFileReader;
 import com.global_task.java.FileReaders.TXTFileReader;
 import com.global_task.java.FileReaders.XMLFileReader;
+import com.global_task.java.FileReaders.JSONFileReader;
+import com.global_task.contracts.Interface.InterfaceFileReader;
 
 public class Main {
     private static final String FirstKey = "squirreldgwndlaj";
