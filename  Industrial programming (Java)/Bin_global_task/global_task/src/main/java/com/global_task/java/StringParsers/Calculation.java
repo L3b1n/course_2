@@ -1,11 +1,11 @@
 package com.global_task.java.StringParsers;
 
 import java.io.File;
+import java.util.Scanner;
 import java.io.FileFilter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-import java.util.Scanner;
 
 import org.mariuszgromada.math.mxparser.Expression;
 
