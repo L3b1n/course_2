@@ -8,7 +8,14 @@
             "type": "java",
             "name": "Launch Zipper",
             "request": "launch",
-            "mainClass": "com.global_task.java.Zipper",
+            "mainClass": "com.global_task.Zipper",
+            "projectName": "global_task"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "com.global_task.Main",
             "projectName": "global_task"
         },
         {
@@ -23,13 +30,6 @@
             "request": "launch",
             "vmArgs": "--module-path /Users/leonid/Desktop/fpmi/javafx-sdk-19/lib --add-modules javafx.controls,javafx.fxml",
             "mainClass": "com.global_task.GUI.Main",
-            "projectName": "global_task"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "com.global_task.java.Main",
             "projectName": "global_task"
         }
     ]
