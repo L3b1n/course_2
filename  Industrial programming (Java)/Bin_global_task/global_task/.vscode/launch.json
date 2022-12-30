@@ -15,7 +15,7 @@
             "name": "Launch Test",
             "request": "launch",
             "vmArgs": "--module-path /Users/leonid/Desktop/fpmi/javafx-sdk-19/lib --add-modules javafx.controls,javafx.fxml",
-            "mainClass": "com.global_task.GUI.Java.Test",
+            "mainClass": "com.global_task.GUI.Main",
             "projectName": "global_task"
         },
         {
