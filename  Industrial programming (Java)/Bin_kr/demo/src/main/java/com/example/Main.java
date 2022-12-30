@@ -5,7 +5,7 @@ public class Main {
         ClassBD Main = new ClassBD();
         Main.ReadFileInList("test.txt");
         Main.ReadFileInMap("test.txt");
-        Main.deleteName();
+        // Main.deleteName();
         Main.Sort();
         Main.WriteFileInXML();
     }
