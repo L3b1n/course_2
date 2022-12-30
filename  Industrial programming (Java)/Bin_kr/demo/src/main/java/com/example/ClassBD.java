@@ -36,7 +36,7 @@ public class ClassBD {
         while(reader.ready()) {
             int i = 0;
             String[] temp = new String[5];
-            StringTokenizer tokenizer = new StringTokenizer(reader.readLine().toString(), " ;_");
+            StringTokenizer tokenizer = new StringTokenizer(reader.readLine().toString(), " ;_!");
             while(tokenizer.hasMoreTokens()) {
                 temp[i++] = tokenizer.nextElement().toString();
             }

@@ -65,10 +65,10 @@
     </InfoOfStudent>
     <InfoOfStudent>
         <firstName>Kuznecov</firstName>
-        <lastName>Sergey!5.0</lastName>
-        <amount>8.98998963423412E14</amount>
-        <ID>f0976.png</ID>
-        <fileName/>
+        <lastName>Sergey</lastName>
+        <amount>5.0</amount>
+        <ID>898998963423412</ID>
+        <fileName>f0976.png</fileName>
     </InfoOfStudent>
     <InfoOfStudent>
         <firstName>Petrov</firstName>
