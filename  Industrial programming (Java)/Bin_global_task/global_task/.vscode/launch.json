@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Encoder",
+            "request": "launch",
+            "mainClass": "com.global_task.Encoder",
+            "projectName": "global_task"
+        },
+        {
+            "type": "java",
             "name": "Launch Zipper",
             "request": "launch",
             "mainClass": "com.global_task.Zipper",
