@@ -1,20 +1,18 @@
-package com.global_task.java.FileReaders;
+package com.global_task.FileReaders;
 
 import java.io.File;
 import java.io.FileReader;
-import java.io.IOException;
+import java.io.StringReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
-import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
@@ -23,7 +21,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
-import com.global_task.java.StringParsers.Calculation;
+import com.global_task.StringParsers.Calculation;
 
 public class XMLFileReader extends FileReaderInfo {
     public XMLFileReader(String fileName) {
@@ -44,8 +42,8 @@ public class XMLFileReader extends FileReaderInfo {
         return line;
     }
 
-    // @Override
-    public ArrayList<ArrayList<String>> Read() throws IOException, XMLStreamException {
+    @Override
+    public ArrayList<ArrayList<String>> Read() throws Throwable {
         ArrayList<ArrayList<String>> readFile = new ArrayList<>();
         XMLInputFactory factory = XMLInputFactory.newInstance();
         XMLStreamReader reader = factory.createXMLStreamReader(new FileReader(inputName));
@@ -68,9 +66,35 @@ public class XMLFileReader extends FileReaderInfo {
         }
         return readFile;
     }
+
+    @Override
+    public ArrayList<ArrayList<String>> Transform(byte[] tempByte) throws Throwable {
+        String tempString = new String(tempByte, StandardCharsets.UTF_8);
+        ArrayList<ArrayList<String>> readFile = new ArrayList<>();
+        XMLInputFactory factory = XMLInputFactory.newInstance();
+        XMLStreamReader reader = factory.createXMLStreamReader(new StringReader(tempString));
+        int i = 0, counter = 0;
+        readFile.add(0, new ArrayList<>());
+        while(reader.hasNext()) {
+            if(reader.next() == XMLStreamConstants.CHARACTERS) {
+                String tmp = reader.getText().replaceAll("  ", "").replaceAll("\n", "");
+                if(tmp != "") {
+                    readFile.get(i).add(tmp + "\n");
+                    counter = 0;
+                } else {
+                    counter++;
+                }
+            } 
+            if(counter == 3) {
+                readFile.add(++i, new ArrayList<>());
+                counter = 0;
+            }
+        }
+        return readFile;
+    }
     
-    // @Override
-    public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws IOException, TransformerException, ParserConfigurationException {
+    @Override
+    public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
         
@@ -93,8 +117,8 @@ public class XMLFileReader extends FileReaderInfo {
         transformer.transform(source, streamResult);
     }
     
-    // @Override
-    public ArrayList<ArrayList<String>> Calculate(ArrayList<ArrayList<String>> readFile) throws IOException {
+    @Override
+    public ArrayList<ArrayList<String>> Calculate(ArrayList<ArrayList<String>> readFile) throws Throwable {
         ArrayList<ArrayList<String>> calculated = new ArrayList<>();
         int i = 0;
         calculated.add(0, new ArrayList<>());
@@ -110,8 +134,8 @@ public class XMLFileReader extends FileReaderInfo {
         return calculated;
     }
     
-    // @Override
-    public void getResult(String outputFileName) throws IOException, XMLStreamException, TransformerException, ParserConfigurationException {
+    @Override
+    public void getResult(String outputFileName) throws Throwable {
         ArrayList<ArrayList<String>> readFile = Read();
         ArrayList<ArrayList<String>> result = Calculate(readFile);
         Write(result, outputFileName);
