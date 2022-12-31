@@ -1,11 +1,13 @@
-package com.global_task.java.FileReaders;
+package com.global_task.FileReaders;
 
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
-import com.global_task.java.StringParsers.Calculation;
+import com.global_task.StringParsers.Calculation;
 
 public class TXTFileReader extends FileReaderInfo {
     public TXTFileReader(String fileName) {
@@ -22,6 +24,19 @@ public class TXTFileReader extends FileReaderInfo {
             readFile.add(temp);
         }
         reader.close();
+        return readFile;
+    }
+
+    @Override
+    public ArrayList<ArrayList<String>> Transform(byte[] tempByte) throws Throwable {
+        String tempString = new String(tempByte, StandardCharsets.UTF_8);
+        StringTokenizer stringTokenizer = new StringTokenizer(tempString, "\n");
+        ArrayList<ArrayList<String>> readFile = new ArrayList<>();
+        while(stringTokenizer.hasMoreTokens()) {
+            ArrayList<String> temp = new ArrayList<>(); 
+            temp.add(stringTokenizer.nextToken());
+            readFile.add(temp);
+        }
         return readFile;
     }
 
