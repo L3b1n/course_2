@@ -1,7 +1,9 @@
-package com.global_task.java.FileReaders;
+package com.global_task.FileReaders;
 
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.StringReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -9,7 +11,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-import com.global_task.java.StringParsers.Calculation;
+import com.global_task.StringParsers.Calculation;
 
 public class JSONFileReader extends FileReaderInfo {
     public JSONFileReader(String fileName) {
@@ -26,6 +28,25 @@ public class JSONFileReader extends FileReaderInfo {
             JSONObject object = (JSONObject) list.get(i);
             for(int j = 0; j < object.size(); j++) {
                 readFile.get(i).add(object.get("expression" + Integer.toString(j + 1)).toString());
+            }
+            if(i + 1 != list.size()) {
+                readFile.add(i + 1, new ArrayList<>());
+            }
+        }
+        return readFile;
+    }
+
+    @Override
+    public ArrayList<ArrayList<String>> Transform(byte[] tempByte) throws Throwable {
+        ArrayList<ArrayList<String>> readFile = new ArrayList<>();
+        readFile.add(0, new ArrayList<>());
+        JSONParser jsonParser = new JSONParser();
+        String tempString = new String(tempByte, StandardCharsets.UTF_8);
+        JSONArray list = (JSONArray) jsonParser.parse(new StringReader(tempString));
+        for(int i = 0; i < list.size(); i++) {
+            JSONObject object = (JSONObject) list.get(i);
+            for(int j = 0; j < object.size(); j++) {
+                readFile.get(i).add(object.get("expression" + Integer.toString(j + 1)).toString() + "\n");
             }
             if(i + 1 != list.size()) {
                 readFile.add(i + 1, new ArrayList<>());
