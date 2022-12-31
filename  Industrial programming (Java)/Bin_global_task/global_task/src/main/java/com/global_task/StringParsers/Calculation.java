@@ -1,4 +1,4 @@
-package com.global_task.java.StringParsers;
+package com.global_task.StringParsers;
 
 import java.io.File;
 import java.util.Scanner;
