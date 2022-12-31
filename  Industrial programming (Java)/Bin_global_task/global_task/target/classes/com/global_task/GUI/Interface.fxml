@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.global_task.GUI.Controller">
+   <children>
+      <Button fx:id="choosebutton" layoutX="41.0" layoutY="54.0" mnemonicParsing="false" onAction="#actionButton" prefHeight="56.0" prefWidth="182.0" style="-fx-background-color: #00CC33;" text="Choose file" textAlignment="CENTER">
+         <font>
+            <Font name="Comfortaa Light" size="16.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="-2.0" layoutY="355.0" prefHeight="49.0" prefWidth="608.0" style="-fx-background-color: #006600;">
+         <children>
+            <Label fx:id="fileLabel" layoutX="6.0" layoutY="-4.0" prefHeight="55.0" prefWidth="547.0" text="File: " textFill="#01000c" />
+            <Button layoutX="482.0" layoutY="8.0" mnemonicParsing="false" onAction="#actionConvert" prefHeight="28.0" prefWidth="98.0" text="Convert" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="372.0" layoutY="22.0" mnemonicParsing="false" onAction="#actionCompress" prefHeight="25.0" prefWidth="100.0" text="Compress" />
+      <Button layoutX="477.0" layoutY="22.0" mnemonicParsing="false" onAction="#actionDecompress" prefHeight="25.0" prefWidth="100.0" text="Decompress" />
+      <Button layoutX="372.0" layoutY="62.0" mnemonicParsing="false" onAction="#actionEncode" prefHeight="25.0" prefWidth="100.0" text="Encode" />
+      <Button layoutX="477.0" layoutY="62.0" mnemonicParsing="false" onAction="#actionDecode" prefHeight="25.0" prefWidth="100.0" text="Decode" />
+      <Button layoutX="372.0" layoutY="102.0" mnemonicParsing="false" onAction="#actionZip" prefHeight="25.0" prefWidth="100.0" text="Zip" />
+      <Button layoutX="477.0" layoutY="102.0" mnemonicParsing="false" onAction="#actionUnzip" prefHeight="25.0" prefWidth="100.0" text="Unzip" />
+      <TextArea fx:id="textArea" editable="false" layoutX="376.0" layoutY="138.0" prefHeight="138.0" prefWidth="200.0" />
+      <Button layoutX="515.0" layoutY="276.0" mnemonicParsing="false" onAction="#actionClear" prefHeight="26.0" prefWidth="62.0" text="clear" />
+   </children>
+</AnchorPane>
