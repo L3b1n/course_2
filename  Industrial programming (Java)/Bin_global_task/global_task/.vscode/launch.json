@@ -6,9 +6,9 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Encoder",
+            "name": "Launch Encryted",
             "request": "launch",
-            "mainClass": "com.global_task.Encoder",
+            "mainClass": "com.global_task.Encryted",
             "projectName": "global_task"
         },
         {
