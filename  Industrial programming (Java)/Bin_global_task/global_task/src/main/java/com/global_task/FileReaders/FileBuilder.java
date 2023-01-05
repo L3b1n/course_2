@@ -1,6 +1,9 @@
 package com.global_task.FileReaders;
 
+import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 import com.global_task.contracts.Interface.FileReaderBuilder;
 import com.global_task.contracts.Interface.InterfaceFileReader;
@@ -8,6 +11,17 @@ import com.global_task.contracts.Interface.InterfaceFileReader;
 public class FileBuilder implements FileReaderBuilder{
     protected InterfaceFileReader fileReader;
     public FileBuilder(String fileType, String fileName) {
+        if(fileType.equals("zip")) {
+            try {
+                ZipInputStream zis = new ZipInputStream(new FileInputStream(fileName));
+                ZipEntry zipEntry;
+                zipEntry = zis.getNextEntry();
+                fileType = zipEntry.getName().substring(zipEntry.getName().lastIndexOf('.') + 1);
+                zis.close();
+            } catch (Throwable e) {
+                e.printStackTrace();
+            }
+        }
         if(fileType.equals("txt")) {
             fileReader = new TXTFileReader(fileName);
         } else if(fileType.equals("json")) {
