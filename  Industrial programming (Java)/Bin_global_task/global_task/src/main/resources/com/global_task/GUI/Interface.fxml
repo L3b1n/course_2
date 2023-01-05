@@ -23,7 +23,8 @@
       <Button layoutX="477.0" layoutY="62.0" mnemonicParsing="false" onAction="#actionDecode" prefHeight="25.0" prefWidth="100.0" text="Decode" />
       <Button layoutX="372.0" layoutY="102.0" mnemonicParsing="false" onAction="#actionZip" prefHeight="25.0" prefWidth="100.0" text="Zip" />
       <Button layoutX="477.0" layoutY="102.0" mnemonicParsing="false" onAction="#actionUnzip" prefHeight="25.0" prefWidth="100.0" text="Unzip" />
-      <TextArea fx:id="textArea" editable="false" layoutX="376.0" layoutY="138.0" prefHeight="138.0" prefWidth="200.0" />
-      <Button layoutX="515.0" layoutY="276.0" mnemonicParsing="false" onAction="#actionClear" prefHeight="26.0" prefWidth="62.0" text="clear" />
+      <Button layoutX="372.0" layoutY="142.0" mnemonicParsing="false" onAction="#actionCalculate" prefHeight="25.0" prefWidth="205.0" text="Calculate" />
+      <TextArea fx:id="textArea" editable="false" layoutX="376.0" layoutY="174.0" prefHeight="138.0" prefWidth="200.0" />
+      <Button layoutX="515.0" layoutY="315.0" mnemonicParsing="false" onAction="#actionClear" prefHeight="26.0" prefWidth="62.0" text="clear" />
    </children>
 </AnchorPane>
