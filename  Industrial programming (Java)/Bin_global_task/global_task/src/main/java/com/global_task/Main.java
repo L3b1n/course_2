@@ -10,14 +10,7 @@ public class Main {
             serverGet.createServer(9527);
             System.out.println("Please wait");
             serverGet.getFile();
-            
             serverGet.createNewFile();
-            System.out.println("Done!");
-            serverGet.stopServer();
-            Server serverSend = new Server();
-            serverSend.createServer(9528);
-            serverSend.sendFile("newinput.txt");
-            serverSend.stopServer();
         }
     }
 }
