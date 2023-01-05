@@ -18,8 +18,8 @@ public class ZippedFileReader extends FileReader {
     public static void WriteZipped(String inputFileName, String outputFileName) throws Throwable {
         ZipOutputStream writer = new ZipOutputStream(new FileOutputStream(outputFileName));
         FileInputStream reader = new FileInputStream(inputFileName);
-        ZipEntry entry1 = new ZipEntry(inputFileName);
-        writer.putNextEntry(entry1);
+        ZipEntry entry = new ZipEntry(inputFileName);
+        writer.putNextEntry(entry);
         byte[] buffer = new byte[reader.available()];
         reader.read(buffer);
         writer.write(buffer);
