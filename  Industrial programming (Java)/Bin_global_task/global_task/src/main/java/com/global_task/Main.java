@@ -11,6 +11,7 @@ public class Main {
             System.out.println("Please wait");
             serverGet.getFile();
             serverGet.createNewFile();
+            System.out.println("Done");
         }
     }
 }
