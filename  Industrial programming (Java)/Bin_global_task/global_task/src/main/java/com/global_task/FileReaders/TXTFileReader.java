@@ -15,6 +15,27 @@ public class TXTFileReader extends FileReaderInfo {
     }
 
     @Override
+    public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {
+        FileWriter writer = new FileWriter(outputFileName);
+        for(int i = 0; i < result.size(); i++) {
+            writer.write(result.get(i).get(0));
+            if(i != result.size() - 1) {
+                writer.write("\n");
+            }
+        }
+        writer.close();
+    }
+
+    @Override
+    public void WriteResult(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {
+        FileWriter writer = new FileWriter(outputFileName);
+        for(int i = 0; i < result.size(); i++) {
+            writer.write("Result" + Integer.toString(i + 1) + " = " + result.get(i).get(0) + "\n");
+        }
+        writer.close();
+    }
+
+    @Override
     public ArrayList<ArrayList<String>> Read() throws Throwable {
         ArrayList<ArrayList<String>> readFile = new ArrayList<>();
         Scanner reader = new Scanner(new FileReader(inputName));
@@ -41,15 +62,6 @@ public class TXTFileReader extends FileReaderInfo {
     }
 
     @Override
-    public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {
-        FileWriter writer = new FileWriter(outputFileName);
-        for(int i = 0; i < result.size(); i++) {
-            writer.write("Result" + Integer.toString(i + 1) + " = " + result.get(i).get(0) + "\n");
-        }
-        writer.close();
-    }
-
-    @Override
     public ArrayList<ArrayList<String>> Calculate(ArrayList<ArrayList<String>> readFile) throws Throwable {
         ArrayList<ArrayList<String>> calculated = new ArrayList<>();
         for(ArrayList<String> lines : readFile) {
@@ -66,6 +78,6 @@ public class TXTFileReader extends FileReaderInfo {
     public void getResult(String outputFileName) throws Throwable {
         ArrayList<ArrayList<String>> readFile = Read();
         ArrayList<ArrayList<String>> result = Calculate(readFile);
-        Write(result, outputFileName);
+        WriteResult(result, outputFileName);
     }
 }
