@@ -92,6 +92,11 @@ public class CompressFileReader extends FileReader {
     }
 
     @Override
+    public void WriteResult(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {
+        reader.WriteResult(result, outputFileName);
+    }
+
+    @Override
     public ArrayList<ArrayList<String>> Calculate(ArrayList<ArrayList<String>> readFile) throws Throwable {
         ArrayList<ArrayList<String>> calculated = new ArrayList<>();
         for(ArrayList<String> lines : readFile) {
@@ -108,6 +113,6 @@ public class CompressFileReader extends FileReader {
     public void getResult(String outputFileName) throws Throwable {
         ArrayList<ArrayList<String>> readFile = Read();
         ArrayList<ArrayList<String>> result = Calculate(readFile);
-        Write(result, outputFileName);
+        WriteResult(result, outputFileName);
     }
 }
