@@ -1,7 +1,5 @@
 package com.global_task.FileReaders;
 
-import java.util.ArrayList;
-
 import com.global_task.contracts.Interface.InterfaceFileReader;
 
 public abstract class FileReader implements InterfaceFileReader{
@@ -11,9 +9,6 @@ public abstract class FileReader implements InterfaceFileReader{
         this.reader = reader;
         inputName = reader.getFileName();
     }
-
-    @Override
-    public void WriteResult(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {}
 
     @Override
     public String getFileName() {
