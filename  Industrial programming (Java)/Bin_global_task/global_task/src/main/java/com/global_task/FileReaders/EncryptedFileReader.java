@@ -57,6 +57,11 @@ public class EncryptedFileReader extends FileReader {
     }
 
     @Override
+    public void WriteResult(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {
+        reader.WriteResult(result, outputFileName);
+    }
+
+    @Override
     public ArrayList<ArrayList<String>> Read() throws Throwable {
         FileInputStream Reader = new FileInputStream(inputName);
         byte[] readFile = Decrypt(key, Reader);
@@ -78,6 +83,6 @@ public class EncryptedFileReader extends FileReader {
     public void getResult(String outputFileName) throws Throwable {
         ArrayList<ArrayList<String>> readFile = Read();
         ArrayList<ArrayList<String>> result = Calculate(readFile);
-        Write(result, outputFileName);
+        WriteResult(result, outputFileName);
     }
 }
