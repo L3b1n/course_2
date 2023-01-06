@@ -42,7 +42,7 @@ public class EncryptedFileReader extends FileReader {
         byte[] outputBytes = cipher.doFinal(Base64.getDecoder().decode(inputBytes));
         return outputBytes;
     }
-
+    
     private byte[] Decrypt(String key, byte[] tempByte) throws Throwable {
         Key secretKey = new SecretKeySpec(key.getBytes(), "AES");
         Cipher cipher = Cipher.getInstance("AES");
@@ -80,5 +80,4 @@ public class EncryptedFileReader extends FileReader {
         ArrayList<ArrayList<String>> result = Calculate(readFile);
         Write(result, outputFileName);
     }
-
 }
