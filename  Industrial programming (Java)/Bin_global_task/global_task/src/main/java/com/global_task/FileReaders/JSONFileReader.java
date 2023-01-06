@@ -57,6 +57,11 @@ public class JSONFileReader extends FileReaderInfo {
 
     @Override
     public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {
+        WriteResult(result, outputFileName);
+    }
+
+    @Override
+    public void WriteResult(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {
         FileWriter writer = new FileWriter(outputFileName);
         writer.write("[\n\t");
         int i = 0;
@@ -101,6 +106,6 @@ public class JSONFileReader extends FileReaderInfo {
     public void getResult(String outputFileName) throws Throwable {
         ArrayList<ArrayList<String>> readFile = Read();
         ArrayList<ArrayList<String>> result = Calculate(readFile);
-        Write(result, outputFileName);
+        WriteResult(result, outputFileName);
     }
 }
