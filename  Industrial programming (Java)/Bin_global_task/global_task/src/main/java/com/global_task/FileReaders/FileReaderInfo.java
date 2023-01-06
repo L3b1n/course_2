@@ -19,6 +19,9 @@ public class FileReaderInfo implements InterfaceFileReader {
     public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {}
 
     @Override
+    public void WriteResult(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {}
+
+    @Override
     public ArrayList<ArrayList<String>> Read() throws Throwable { 
         return null;
     }
