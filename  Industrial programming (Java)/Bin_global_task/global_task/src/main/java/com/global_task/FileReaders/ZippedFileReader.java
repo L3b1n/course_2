@@ -34,6 +34,11 @@ public class ZippedFileReader extends FileReader {
     }
 
     @Override
+    public void WriteResult(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {
+        reader.WriteResult(result, outputFileName);
+    }
+
+    @Override
     public ArrayList<ArrayList<String>> Read() throws Throwable {
         byte[] buffer = new byte[1024];
         ZipInputStream zipReader = new ZipInputStream(new FileInputStream(inputName));
@@ -64,6 +69,6 @@ public class ZippedFileReader extends FileReader {
     public void getResult(String outputFileName) throws Throwable {
         ArrayList<ArrayList<String>> readFile = Read();
         ArrayList<ArrayList<String>> result = Calculate(readFile);
-        Write(result, outputFileName);
+        WriteResult(result, outputFileName);
     }
 }
