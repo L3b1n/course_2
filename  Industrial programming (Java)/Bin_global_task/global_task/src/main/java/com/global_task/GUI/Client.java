@@ -5,10 +5,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
@@ -16,17 +19,24 @@ import java.net.ServerSocket;
 
 public class Client {
     private Socket client;
+    private InputStream inputStream;
     private OutputStream outputStream;
 
     public void connectServer(int serverPort) throws Throwable {
         try(ServerSocket server = new ServerSocket(serverPort)) {
             client = server.accept();
-        } 
+        }
+        inputStream = client.getInputStream();
         outputStream = client.getOutputStream();
     }
 
     public void stopClient() throws Throwable {
         client.close();
+    }
+
+    public String getResult() throws Throwable {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+        return reader.readLine();
     }
 
     public void sendFile(File tempFile, File directoryFile, String flag, ArrayList<String> keys, String compressLevel) throws Throwable {
