@@ -29,75 +29,95 @@ public class CompressFileReader extends FileReader {
         this.compressLevel = compressLevel;
     }
 
-    public static void Compress(Integer _compressLevel, String inputFileName, String outputFileName) throws Throwable {
-        FileInputStream is = new FileInputStream(inputFileName);
-        FileOutputStream os = new FileOutputStream(outputFileName);
-        byte[] data = is.readAllBytes();
-        ByteArrayOutputStream writer = new ByteArrayOutputStream(512);
-        DeflaterOutputStream dos = new DeflaterOutputStream(writer, new Deflater(_compressLevel));
-        dos.write(data);
-        writer.close();
-        dos.close();
-        is.close();
-        os.write(Base64.getEncoder().encode(writer.toByteArray()));
-        os.close();
-    }
-
-    public byte[] Decompress(String inputName) throws Throwable {
-        FileInputStream tempReader = new FileInputStream(inputName);
-        byte[] inputBytes = Base64.getDecoder().decode(tempReader.readAllBytes());
-        InputStream in = new ByteArrayInputStream(inputBytes);
-        InflaterInputStream reader = new InflaterInputStream(in);
-        ByteArrayOutputStream writer = new ByteArrayOutputStream(512);
-        int temp;
-        while((temp = reader.read()) != -1) {
-            writer.write((byte)temp);
+    public static void Compress(Integer _compressLevel, String inputFileName, String outputFileName) throws Exception {
+        try {
+            FileInputStream is = new FileInputStream(inputFileName);
+            FileOutputStream os = new FileOutputStream(outputFileName);
+            byte[] data = is.readAllBytes();
+            ByteArrayOutputStream writer = new ByteArrayOutputStream(512);
+            DeflaterOutputStream dos = new DeflaterOutputStream(writer, new Deflater(_compressLevel));
+            dos.write(data);
+            writer.close();
+            dos.close();
+            is.close();
+            os.write(Base64.getEncoder().encode(writer.toByteArray()));
+            os.close();
+        } catch(Throwable e) {
+            throw new Exception("Error in file compress. Check selected file, actions and try again.", e);
         }
-        in.close();
-        reader.close();
-        writer.close();
-        tempReader.close();
-        return writer.toByteArray();
     }
 
-    private byte[] Decompress(byte[] tempByte) throws Throwable {
-        InputStream in = new ByteArrayInputStream(tempByte);
-        InflaterInputStream reader = new InflaterInputStream(in);
-        ByteArrayOutputStream writer = new ByteArrayOutputStream(512);
-        int temp;
-        while((temp = reader.read()) != -1) {
-            writer.write(temp);
+    public byte[] Decompress(String inputName) throws Exception {
+        try {
+            FileInputStream tempReader = new FileInputStream(inputName);
+            byte[] inputBytes = Base64.getDecoder().decode(tempReader.readAllBytes());
+            InputStream in = new ByteArrayInputStream(inputBytes);
+            InflaterInputStream reader = new InflaterInputStream(in);
+            ByteArrayOutputStream writer = new ByteArrayOutputStream(512);
+            int temp;
+            while((temp = reader.read()) != -1) {
+                writer.write((byte)temp);
+            }
+            in.close();
+            reader.close();
+            writer.close();
+            tempReader.close();
+            return writer.toByteArray();
+        } catch(Throwable e) {
+            throw new Exception("Error in file decomress. Check selected file, actions and try again.", e);
         }
-        in.close();
-        reader.close();
-        writer.close();
-        return writer.toByteArray();
+    }
+
+    private byte[] Decompress(byte[] tempByte) throws Exception {
+        try {
+            InputStream in = new ByteArrayInputStream(tempByte);
+            InflaterInputStream reader = new InflaterInputStream(in);
+            ByteArrayOutputStream writer = new ByteArrayOutputStream(512);
+            int temp;
+            while((temp = reader.read()) != -1) {
+                writer.write(temp);
+            }
+            in.close();
+            reader.close();
+            writer.close();
+            return writer.toByteArray();
+        } catch(Throwable e) {
+            throw new Exception("Error in file decompress. Check selected file, actions and try again.", e);
+        }
     }
 
     @Override
-    public ArrayList<ArrayList<String>> Read() throws Throwable {
-        byte[] tempByte = Decompress(inputName);
-        return reader.Transform(tempByte);
+    public ArrayList<ArrayList<String>> Read() throws Exception {
+        try {
+            byte[] tempByte = Decompress(inputName);
+            return reader.Transform(tempByte);
+        } catch(Throwable e) {
+            throw new Exception("Error in file decomress. Check selected file, actions and try again.", e);
+        }
     }
 
     @Override
-    public ArrayList<ArrayList<String>> Transform(byte[] tempByte) throws Throwable {
-        byte[] decompressByte = Decompress(tempByte);
-        return reader.Transform(decompressByte);
+    public ArrayList<ArrayList<String>> Transform(byte[] tempByte) throws Exception {
+        try {
+            byte[] decompressByte = Decompress(tempByte);
+            return reader.Transform(decompressByte);
+        } catch(Throwable e) {
+            throw new Exception("Error in file decomress. Check selected file, actions and try again.", e);
+        }
     }
 
     @Override
-    public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {
+    public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws Exception {
         reader.Write(result, outputFileName);
     }
 
     @Override
-    public void WriteResult(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {
+    public void WriteResult(ArrayList<ArrayList<String>> result, String outputFileName) throws Exception {
         reader.WriteResult(result, outputFileName);
     }
 
     @Override
-    public ArrayList<ArrayList<String>> Calculate(ArrayList<ArrayList<String>> readFile) throws Throwable {
+    public ArrayList<ArrayList<String>> Calculate(ArrayList<ArrayList<String>> readFile) {
         ArrayList<ArrayList<String>> calculated = new ArrayList<>();
         for(ArrayList<String> lines : readFile) {
             for(String line : lines) {
@@ -110,7 +130,7 @@ public class CompressFileReader extends FileReader {
     }
     
     @Override
-    public void getResult(String outputFileName) throws Throwable {
+    public void getResult(String outputFileName) throws Exception {
         ArrayList<ArrayList<String>> readFile = Read();
         ArrayList<ArrayList<String>> result = Calculate(readFile);
         WriteResult(result, outputFileName);
