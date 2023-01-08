@@ -43,104 +43,121 @@ public class XMLFileReader extends FileReaderInfo {
     }
 
     @Override
-    public ArrayList<ArrayList<String>> Read() throws Throwable {
-        ArrayList<ArrayList<String>> readFile = new ArrayList<>();
-        XMLInputFactory factory = XMLInputFactory.newInstance();
-        XMLStreamReader reader = factory.createXMLStreamReader(new FileReader(inputName));
-        int i = 0, counter = 0;
-        readFile.add(0, new ArrayList<>());
-        while(reader.hasNext()) {
-            if(reader.next() == XMLStreamConstants.CHARACTERS) {
-                String tmp = reader.getText().replaceAll("  ", "").replaceAll("\n", "");
-                if(tmp != "") {
-                    readFile.get(i).add(tmp);
+    public ArrayList<ArrayList<String>> Read() throws Exception {
+        try {
+            ArrayList<ArrayList<String>> readFile = new ArrayList<>();
+            XMLInputFactory factory = XMLInputFactory.newInstance();
+            XMLStreamReader reader = factory.createXMLStreamReader(new FileReader(inputName));
+            int i = 0, counter = 0;
+            readFile.add(0, new ArrayList<>());
+            while(reader.hasNext()) {
+                if(reader.next() == XMLStreamConstants.CHARACTERS) {
+                    String tmp = reader.getText().replaceAll("  ", "").replaceAll("\n", "");
+                    if(tmp != "") {
+                        readFile.get(i).add(tmp);
+                        counter = 0;
+                    } else {
+                        counter++;
+                    }
+                } 
+                if(counter == 3) {
+                    readFile.add(++i, new ArrayList<>());
                     counter = 0;
-                } else {
-                    counter++;
                 }
-            } 
-            if(counter == 3) {
-                readFile.add(++i, new ArrayList<>());
-                counter = 0;
             }
+            return readFile;
+        } catch(Exception e) {
+            throw new Exception("Error in XML file calculating. Check selected file, actions and try again.", e);
         }
-        return readFile;
     }
 
     @Override
-    public ArrayList<ArrayList<String>> Transform(byte[] tempByte) throws Throwable {
-        String tempString = new String(tempByte, StandardCharsets.UTF_8);
-        ArrayList<ArrayList<String>> readFile = new ArrayList<>();
-        XMLInputFactory factory = XMLInputFactory.newInstance();
-        XMLStreamReader reader = factory.createXMLStreamReader(new StringReader(tempString));
-        int i = 0, counter = 0;
-        readFile.add(0, new ArrayList<>());
-        while(reader.hasNext()) {
-            if(reader.next() == XMLStreamConstants.CHARACTERS) {
-                String tmp = reader.getText().replaceAll("  ", "").replaceAll("\n", "");
-                if(tmp != "") {
-                    readFile.get(i).add(tmp + "\n");
+    public ArrayList<ArrayList<String>> Transform(byte[] tempByte) throws Exception {
+        try {
+            String tempString = new String(tempByte, StandardCharsets.UTF_8);
+            ArrayList<ArrayList<String>> readFile = new ArrayList<>();
+            XMLInputFactory factory = XMLInputFactory.newInstance();
+            XMLStreamReader reader = factory.createXMLStreamReader(new StringReader(tempString));
+            int i = 0, counter = 0;
+            readFile.add(0, new ArrayList<>());
+            while(reader.hasNext()) {
+                if(reader.next() == XMLStreamConstants.CHARACTERS) {
+                    String tmp = reader.getText().replaceAll("  ", "").replaceAll("\n", "");
+                    if(tmp != "") {
+                        readFile.get(i).add(tmp + "\n");
+                        counter = 0;
+                    } else {
+                        counter++;
+                    }
+                } 
+                if(counter == 3) {
+                    readFile.add(++i, new ArrayList<>());
                     counter = 0;
-                } else {
-                    counter++;
                 }
-            } 
-            if(counter == 3) {
-                readFile.add(++i, new ArrayList<>());
-                counter = 0;
             }
+            return readFile;
+        } catch(Exception e) {
+            throw new Exception("Error in XML file calculating. Check selected file, actions and try again.", e);
         }
-        return readFile;
     }
     
     @Override
-    public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {
+    public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws Exception {
         WriteResult(result, outputFileName);
     }
     
     @Override
-    public void WriteResult(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder;
-        
-        builder = factory.newDocumentBuilder();
-        Document document = builder.newDocument();
-        
-        Element element = document.createElement("ExpressionList");
-        
-        TransformerFactory transformerFactory = TransformerFactory.newInstance();
-        Transformer transformer = transformerFactory.newTransformer();
-        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-
-        DOMSource source = new DOMSource(document);
-        StreamResult streamResult = new StreamResult(new File(outputFileName));
-
-        document.appendChild(element);
-        for(int i = 0; i < result.size() - 1; i++) {
-            element.appendChild(XMLFileReader.getLanguage(document, result.get(i)));
+    public void WriteResult(ArrayList<ArrayList<String>> result, String outputFileName) throws Exception {
+        try {
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder;
+            
+            builder = factory.newDocumentBuilder();
+            Document document = builder.newDocument();
+            
+            Element element = document.createElement("ExpressionList");
+            
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+    
+            DOMSource source = new DOMSource(document);
+            StreamResult streamResult = new StreamResult(new File(outputFileName));
+    
+            document.appendChild(element);
+            for(int i = 0; i < result.size() - 1; i++) {
+                element.appendChild(XMLFileReader.getLanguage(document, result.get(i)));
+            }
+            transformer.transform(source, streamResult);
+        } catch(Exception e) {
+            throw new Exception("Error in XML file calculating. Check selected file, actions and try again.", e);
         }
-        transformer.transform(source, streamResult);
     }
     
     @Override
-    public ArrayList<ArrayList<String>> Calculate(ArrayList<ArrayList<String>> readFile) throws Throwable {
+    public ArrayList<ArrayList<String>> Calculate(ArrayList<ArrayList<String>> readFile) throws Exception {
         ArrayList<ArrayList<String>> calculated = new ArrayList<>();
         int i = 0;
         calculated.add(0, new ArrayList<>());
         for(ArrayList<String> lines : readFile) {
             for(String line : lines) {
                 String calculatedLine = Calculation.CalculationOfLine(line);
-                calculated.get(i).add(calculatedLine);
+                if(!calculatedLine.equals(line)) {
+                    calculated.get(i).add(calculatedLine);
+                }
             }
-            if(i + 1 != readFile.size()) {
+            if(i + 1 != readFile.size() && calculated.get(i).size() != 0) {
                 calculated.add(++i, new ArrayList<>());
             }
+        }
+        if(calculated.size() == 1) {
+            throw new Exception("Error in XML file calculating. There aren't any math expressions. Check selected file, actions and try again.");
         }
         return calculated;
     }
     
     @Override
-    public void getResult(String outputFileName) throws Throwable {
+    public void getResult(String outputFileName) throws Exception {
         ArrayList<ArrayList<String>> readFile = Read();
         ArrayList<ArrayList<String>> result = Calculate(readFile);
         WriteResult(result, outputFileName);
