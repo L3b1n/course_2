@@ -16,26 +16,26 @@ public class FileReaderInfo implements InterfaceFileReader {
     }
 
     @Override
-    public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {}
+    public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws Exception {}
 
     @Override
-    public void WriteResult(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {}
+    public void WriteResult(ArrayList<ArrayList<String>> result, String outputFileName) throws Exception {}
 
     @Override
-    public ArrayList<ArrayList<String>> Read() throws Throwable { 
+    public ArrayList<ArrayList<String>> Read() throws Exception { 
         return null;
     }
 
     @Override
-    public ArrayList<ArrayList<String>> Calculate(ArrayList<ArrayList<String>> readFile) throws Throwable { 
+    public ArrayList<ArrayList<String>> Calculate(ArrayList<ArrayList<String>> readFile) throws Exception { 
         return null;
     }
     
     @Override
-    public ArrayList<ArrayList<String>> Transform(byte[] tempByte) throws Throwable {
+    public ArrayList<ArrayList<String>> Transform(byte[] tempByte) throws Exception {
         return null;
     }
 
     @Override
-    public void getResult(String outputFileName) throws Throwable {}
+    public void getResult(String outputFileName) throws Exception {}
 }
