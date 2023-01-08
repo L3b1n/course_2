@@ -21,66 +21,86 @@ public class EncryptedFileReader extends FileReader {
         this.key = key;
     }
 
-    public static void Encrypt(String key, String inputFileName, String outputFileName) throws Throwable {
-        FileInputStream is = new FileInputStream(inputFileName);
-        FileOutputStream os = new FileOutputStream(outputFileName);
-        Key secretKey = new SecretKeySpec(Arrays.copyOf(key.getBytes(), 16), "AES");
-        Cipher cipher = Cipher.getInstance("AES");
-        cipher.init(Cipher.ENCRYPT_MODE, secretKey);
-        byte[] inputBytes = is.readAllBytes();
-        byte[] outputBytes = cipher.doFinal(inputBytes);
-        os.write(Base64.getEncoder().encode(outputBytes));
-        os.close();
-        is.close();
+    public static void Encrypt(String key, String inputFileName, String outputFileName) throws Exception {
+        try {
+            FileInputStream is = new FileInputStream(inputFileName);
+            FileOutputStream os = new FileOutputStream(outputFileName);
+            Key secretKey = new SecretKeySpec(Arrays.copyOf(key.getBytes(), 16), "AES");
+            Cipher cipher = Cipher.getInstance("AES");
+            cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+            byte[] inputBytes = is.readAllBytes();
+            byte[] outputBytes = cipher.doFinal(inputBytes);
+            os.write(Base64.getEncoder().encode(outputBytes));
+            os.close();
+            is.close();
+        } catch(Exception e) {
+            throw new Exception("Error in file encode. Check selected file, actions and try again.", e);
+        }
     }
 
-    public byte[] Decrypt(String key, InputStream is) throws Throwable {
-        Key secretKey = new SecretKeySpec(Arrays.copyOf(key.getBytes(), 16), "AES");
-        Cipher cipher = Cipher.getInstance("AES");
-        cipher.init(Cipher.DECRYPT_MODE, secretKey);
-        byte[] inputBytes = is.readAllBytes();
-        byte[] outputBytes = cipher.doFinal(Base64.getDecoder().decode(inputBytes));
-        return outputBytes;
+    public byte[] Decrypt(String key, InputStream is) throws Exception {
+        try {
+            Key secretKey = new SecretKeySpec(Arrays.copyOf(key.getBytes(), 16), "AES");
+            Cipher cipher = Cipher.getInstance("AES");
+            cipher.init(Cipher.DECRYPT_MODE, secretKey);
+            byte[] inputBytes = is.readAllBytes();
+            byte[] outputBytes = cipher.doFinal(Base64.getDecoder().decode(inputBytes));
+            return outputBytes;
+        } catch(Exception e) {
+            throw new Exception("Error in file decode. Check selected file, actions and try again.", e);
+        }
     }
     
-    private byte[] Decrypt(String key, byte[] tempByte) throws Throwable {
-        Key secretKey = new SecretKeySpec(key.getBytes(), "AES");
-        Cipher cipher = Cipher.getInstance("AES");
-        cipher.init(Cipher.DECRYPT_MODE, secretKey);
-        byte[] outputBytes = cipher.doFinal(Base64.getDecoder().decode(tempByte));
-        return outputBytes;
+    private byte[] Decrypt(String key, byte[] tempByte) throws Exception {
+        try {
+            Key secretKey = new SecretKeySpec(key.getBytes(), "AES");
+            Cipher cipher = Cipher.getInstance("AES");
+            cipher.init(Cipher.DECRYPT_MODE, secretKey);
+            byte[] outputBytes = cipher.doFinal(Base64.getDecoder().decode(tempByte));
+            return outputBytes;
+        } catch(Exception e) {
+            throw new Exception("Error in file decode. Check selected file, actions and try again.", e);
+        }
     }
 
     @Override
-    public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {
+    public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws Exception {
         reader.Write(result, outputFileName);
     }
 
     @Override
-    public void WriteResult(ArrayList<ArrayList<String>> result, String outputFileName) throws Throwable {
+    public void WriteResult(ArrayList<ArrayList<String>> result, String outputFileName) throws Exception {
         reader.WriteResult(result, outputFileName);
     }
 
     @Override
-    public ArrayList<ArrayList<String>> Read() throws Throwable {
-        FileInputStream Reader = new FileInputStream(inputName);
-        byte[] readFile = Decrypt(key, Reader);
-        return reader.Transform(readFile);
+    public ArrayList<ArrayList<String>> Read() throws Exception {
+        try {
+            FileInputStream Reader = new FileInputStream(inputName);
+            byte[] readFile = Decrypt(key, Reader);
+            return reader.Transform(readFile);
+        } catch(Throwable e) {
+            throw new Exception("Error in file decode. Check selected file, actions and try again.", e);
+        }
     }
     
     @Override
-    public ArrayList<ArrayList<String>> Transform(byte[] tempByte) throws Throwable {
-        byte[] decryptByte = Decrypt(key, tempByte);
-        return reader.Transform(decryptByte);
+    public ArrayList<ArrayList<String>> Transform(byte[] tempByte) throws Exception {
+        try {
+            byte[] decryptByte = Decrypt(key, tempByte);
+            return reader.Transform(decryptByte);
+        } catch(Throwable e) {
+            throw new Exception("Error in file decode. Check selected file, actions and try again.", e);
+        }
     }
 
     @Override
-    public ArrayList<ArrayList<String>> Calculate(ArrayList<ArrayList<String>> readFile) throws Throwable {
+    public ArrayList<ArrayList<String>> Calculate(ArrayList<ArrayList<String>> readFile) throws Exception {
         return reader.Calculate(readFile);
     }
     
     @Override
-    public void getResult(String outputFileName) throws Throwable {
+    public void getResult(String outputFileName) throws Exception {
         ArrayList<ArrayList<String>> readFile = Read();
         ArrayList<ArrayList<String>> result = Calculate(readFile);
         WriteResult(result, outputFileName);
