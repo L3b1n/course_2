@@ -50,7 +50,24 @@ public class TXTFileReader extends FileReaderInfo {
             Scanner reader = new Scanner(new FileReader(inputName));
             while(reader.hasNextLine()) {
                 ArrayList<String> temp = new ArrayList<>();
-                temp.add(reader.nextLine() + "\n");
+                temp.add(reader.nextLine());
+                readFile.add(temp);
+            }
+            reader.close();
+            return readFile;
+        } catch(Exception e) {
+            throw new Exception("Error in TXT file calculating. Check selected file, actions and try again.", e);
+        }
+    }
+
+    @Override
+    public ArrayList<ArrayList<String>> ReadResult() throws Exception {
+        try {
+            ArrayList<ArrayList<String>> readFile = new ArrayList<>();
+            Scanner reader = new Scanner(new FileReader(inputName));
+            while(reader.hasNextLine()) {
+                ArrayList<String> temp = new ArrayList<>();
+                temp.add(reader.nextLine());
                 readFile.add(temp);
             }
             reader.close();
@@ -62,6 +79,23 @@ public class TXTFileReader extends FileReaderInfo {
 
     @Override
     public ArrayList<ArrayList<String>> Transform(byte[] tempByte) throws Exception {
+        try {
+            String tempString = new String(tempByte, StandardCharsets.UTF_8);
+            StringTokenizer stringTokenizer = new StringTokenizer(tempString, "\n");
+            ArrayList<ArrayList<String>> readFile = new ArrayList<>();
+            while(stringTokenizer.hasMoreTokens()) {
+                ArrayList<String> temp = new ArrayList<>(); 
+                temp.add(stringTokenizer.nextToken());
+                readFile.add(temp);
+            }
+            return readFile;
+        } catch(Exception e) {
+            throw new Exception("Error in TXT file calculating. Check selected file, actions and try again.", e);
+        }
+    }
+
+    @Override
+    public ArrayList<ArrayList<String>> TransformResult(byte[] tempByte) throws Exception {
         try {
             String tempString = new String(tempByte, StandardCharsets.UTF_8);
             StringTokenizer stringTokenizer = new StringTokenizer(tempString, "\n");
@@ -99,7 +133,7 @@ public class TXTFileReader extends FileReaderInfo {
     
     @Override
     public void getResult(String outputFileName) throws Exception {
-        ArrayList<ArrayList<String>> readFile = Read();
+        ArrayList<ArrayList<String>> readFile = ReadResult();
         ArrayList<ArrayList<String>> result = Calculate(readFile);
         WriteResult(result, outputFileName);
     }
