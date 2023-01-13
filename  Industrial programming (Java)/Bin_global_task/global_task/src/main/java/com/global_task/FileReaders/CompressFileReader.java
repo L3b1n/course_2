@@ -97,10 +97,30 @@ public class CompressFileReader extends FileReader {
     }
 
     @Override
+    public ArrayList<ArrayList<String>> ReadResult() throws Exception {
+        try {
+            byte[] tempByte = Decompress(inputName);
+            return reader.TransformResult(tempByte);
+        } catch(Throwable e) {
+            throw new Exception("Error in file decomress. Check selected file, actions and try again.", e);
+        }
+    }
+
+    @Override
     public ArrayList<ArrayList<String>> Transform(byte[] tempByte) throws Exception {
         try {
             byte[] decompressByte = Decompress(tempByte);
             return reader.Transform(decompressByte);
+        } catch(Throwable e) {
+            throw new Exception("Error in file decomress. Check selected file, actions and try again.", e);
+        }
+    }
+
+    @Override
+    public ArrayList<ArrayList<String>> TransformResult(byte[] tempByte) throws Exception {
+        try {
+            byte[] decompressByte = Decompress(tempByte);
+            return reader.TransformResult(decompressByte);
         } catch(Throwable e) {
             throw new Exception("Error in file decomress. Check selected file, actions and try again.", e);
         }
@@ -131,7 +151,7 @@ public class CompressFileReader extends FileReader {
     
     @Override
     public void getResult(String outputFileName) throws Exception {
-        ArrayList<ArrayList<String>> readFile = Read();
+        ArrayList<ArrayList<String>> readFile = ReadResult();
         ArrayList<ArrayList<String>> result = Calculate(readFile);
         WriteResult(result, outputFileName);
     }
