@@ -5,14 +5,14 @@ import java.util.ArrayList;
 import com.global_task.contracts.Interface.InterfaceFileReader;
 
 public class FileReaderInfo implements InterfaceFileReader {
-    protected String inputName;
+    protected static String inputName;
     public FileReaderInfo(String inputFileName) {
-        this.inputName = inputFileName;
+        FileReaderInfo.inputName = inputFileName;
     }
 
     @Override
     public String getFileName() {
-        return this.inputName;
+        return FileReaderInfo.inputName;
     }
 
     @Override
@@ -27,12 +27,22 @@ public class FileReaderInfo implements InterfaceFileReader {
     }
 
     @Override
+    public ArrayList<ArrayList<String>> ReadResult() throws Exception {
+        return null;
+    }
+
+    @Override
     public ArrayList<ArrayList<String>> Calculate(ArrayList<ArrayList<String>> readFile) throws Exception { 
         return null;
     }
     
     @Override
     public ArrayList<ArrayList<String>> Transform(byte[] tempByte) throws Exception {
+        return null;
+    }
+    
+    @Override
+    public ArrayList<ArrayList<String>> TransformResult(byte[] tempByte) throws Exception {
         return null;
     }
 
