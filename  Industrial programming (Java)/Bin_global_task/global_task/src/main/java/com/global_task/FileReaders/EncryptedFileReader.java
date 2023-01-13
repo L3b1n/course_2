@@ -83,9 +83,30 @@ public class EncryptedFileReader extends FileReader {
             throw new Exception("Error in file decode. Check selected file, actions and try again.", e);
         }
     }
+
+    @Override
+    public ArrayList<ArrayList<String>> ReadResult() throws Exception {
+        try {
+            FileInputStream Reader = new FileInputStream(inputName);
+            byte[] readFile = Decrypt(key, Reader);
+            return reader.TransformResult(readFile);
+        } catch(Throwable e) {
+            throw new Exception("Error in file decode. Check selected file, actions and try again.", e);
+        }
+    }
     
     @Override
     public ArrayList<ArrayList<String>> Transform(byte[] tempByte) throws Exception {
+        try {
+            byte[] decryptByte = Decrypt(key, tempByte);
+            return reader.Transform(decryptByte);
+        } catch(Throwable e) {
+            throw new Exception("Error in file decode. Check selected file, actions and try again.", e);
+        }
+    }
+    
+    @Override
+    public ArrayList<ArrayList<String>> TransformResult(byte[] tempByte) throws Exception {
         try {
             byte[] decryptByte = Decrypt(key, tempByte);
             return reader.Transform(decryptByte);
@@ -101,7 +122,7 @@ public class EncryptedFileReader extends FileReader {
     
     @Override
     public void getResult(String outputFileName) throws Exception {
-        ArrayList<ArrayList<String>> readFile = Read();
+        ArrayList<ArrayList<String>> readFile = ReadResult();
         ArrayList<ArrayList<String>> result = Calculate(readFile);
         WriteResult(result, outputFileName);
     }
