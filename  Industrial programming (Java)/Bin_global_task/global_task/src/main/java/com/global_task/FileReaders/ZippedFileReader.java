@@ -62,10 +62,36 @@ public class ZippedFileReader extends FileReader {
             throw new Exception("Error in file unzip. Check selected file, actions and try again.", e);
         }
     }
+
+    @Override
+    public ArrayList<ArrayList<String>> ReadResult() throws Exception {
+        try {
+            byte[] buffer = new byte[1024];
+            ZipInputStream zipReader = new ZipInputStream(new FileInputStream(inputName));
+            StringBuilder builder = new StringBuilder();
+            while(zipReader.getNextEntry() != null) {
+                int length;
+                while((length = zipReader.read(buffer)) > 0) {
+                    String tempString = new String(buffer, 0, length, StandardCharsets.UTF_8);
+                    builder.append(tempString);
+                }
+            }
+            zipReader.close();
+            byte[] tempByte = builder.toString().getBytes(StandardCharsets.UTF_8);
+            return reader.TransformResult(tempByte);
+        } catch(Exception e) {
+            throw new Exception("Error in file unzip. Check selected file, actions and try again.", e);
+        }
+    }
     
     @Override
     public ArrayList<ArrayList<String>> Transform(byte[] readFile) throws Exception {
         return reader.Transform(readFile);
+    }
+    
+    @Override
+    public ArrayList<ArrayList<String>> TransformResult(byte[] readFile) throws Exception {
+        return reader.TransformResult(readFile);
     }
     
     @Override
@@ -75,7 +101,7 @@ public class ZippedFileReader extends FileReader {
     
     @Override
     public void getResult(String outputFileName) throws Exception {
-        ArrayList<ArrayList<String>> readFile = Read();
+        ArrayList<ArrayList<String>> readFile = ReadResult();
         ArrayList<ArrayList<String>> result = Calculate(readFile);
         WriteResult(result, outputFileName);
     }
