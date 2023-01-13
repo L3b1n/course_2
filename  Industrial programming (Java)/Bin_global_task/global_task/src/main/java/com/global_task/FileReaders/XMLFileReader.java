@@ -2,9 +2,11 @@ package com.global_task.FileReaders;
 
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.StringReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -34,7 +36,15 @@ public class XMLFileReader extends FileReaderInfo {
         return node;
     }
     
-    private static Node getLanguage(Document doc, ArrayList<String> result) {
+    // private static Node getLanguage(Document doc, ArrayList<String> result) {
+    //     Element line = doc.createElement("expressions");
+    //     for(int i = 0, k = 1; i < result.size(); i++) {
+    //         line.appendChild(getLanguageElements(doc, line, "expression" + Integer.toString(k++), result.get(i)));
+    //     }
+    //     return line;
+    // }
+    
+    private static Node getResultLanguage(Document doc, ArrayList<String> result) {
         Element line = doc.createElement("expressions");
         for(int i = 0, k = 1; i < result.size(); i++) {
             line.appendChild(getLanguageElements(doc, line, "Result" + Integer.toString(k++), result.get(i)));
@@ -44,6 +54,23 @@ public class XMLFileReader extends FileReaderInfo {
 
     @Override
     public ArrayList<ArrayList<String>> Read() throws Exception {
+        try {
+            ArrayList<ArrayList<String>> readFile = new ArrayList<>();
+            Scanner reader = new Scanner(new FileReader(inputName));
+            while(reader.hasNextLine()) {
+                ArrayList<String> temp = new ArrayList<>();
+                temp.add(reader.nextLine());
+                readFile.add(temp);
+            }
+            reader.close();
+            return readFile;
+        } catch(Exception e) {
+            throw new Exception("Error in XML file reading. Check selected file, actions and try again.", e);
+        }
+    }
+
+    @Override
+    public ArrayList<ArrayList<String>> ReadResult() throws Exception {
         try {
             ArrayList<ArrayList<String>> readFile = new ArrayList<>();
             XMLInputFactory factory = XMLInputFactory.newInstance();
@@ -76,6 +103,24 @@ public class XMLFileReader extends FileReaderInfo {
         try {
             String tempString = new String(tempByte, StandardCharsets.UTF_8);
             ArrayList<ArrayList<String>> readFile = new ArrayList<>();
+            Scanner reader = new Scanner(new StringReader(tempString));
+            while(reader.hasNext()) {
+                ArrayList<String> temp = new ArrayList<>();
+                temp.add(reader.nextLine());
+                readFile.add(temp);
+            }
+            reader.close();
+            return readFile;
+        } catch(Exception e) {
+            throw new Exception("Error in XML file reading. Check selected file, actions and try again.", e);
+        }
+    }
+
+    @Override
+    public ArrayList<ArrayList<String>> TransformResult(byte[] tempByte) throws Exception {
+        try {
+            String tempString = new String(tempByte, StandardCharsets.UTF_8);
+            ArrayList<ArrayList<String>> readFile = new ArrayList<>();
             XMLInputFactory factory = XMLInputFactory.newInstance();
             XMLStreamReader reader = factory.createXMLStreamReader(new StringReader(tempString));
             int i = 0, counter = 0;
@@ -84,7 +129,7 @@ public class XMLFileReader extends FileReaderInfo {
                 if(reader.next() == XMLStreamConstants.CHARACTERS) {
                     String tmp = reader.getText().replaceAll("  ", "").replaceAll("\n", "");
                     if(tmp != "") {
-                        readFile.get(i).add(tmp + "\n");
+                        readFile.get(i).add(tmp);
                         counter = 0;
                     } else {
                         counter++;
@@ -103,7 +148,18 @@ public class XMLFileReader extends FileReaderInfo {
     
     @Override
     public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws Exception {
-        WriteResult(result, outputFileName);
+        try {
+            FileWriter writer = new FileWriter(outputFileName);
+            for(int i = 0; i < result.size(); i++) {
+                writer.write(result.get(i).get(0));
+                if(i != result.size() - 1) {
+                    writer.write("\n");
+                }
+            }
+            writer.close();
+        } catch(Exception e) {
+            throw new Exception("Error in XML file write. Check selected file, actions and try again.", e);
+        }
     }
     
     @Override
@@ -126,7 +182,7 @@ public class XMLFileReader extends FileReaderInfo {
     
             document.appendChild(element);
             for(int i = 0; i < result.size() - 1; i++) {
-                element.appendChild(XMLFileReader.getLanguage(document, result.get(i)));
+                element.appendChild(XMLFileReader.getResultLanguage(document, result.get(i)));
             }
             transformer.transform(source, streamResult);
         } catch(Exception e) {
@@ -158,7 +214,7 @@ public class XMLFileReader extends FileReaderInfo {
     
     @Override
     public void getResult(String outputFileName) throws Exception {
-        ArrayList<ArrayList<String>> readFile = Read();
+        ArrayList<ArrayList<String>> readFile = ReadResult();
         ArrayList<ArrayList<String>> result = Calculate(readFile);
         WriteResult(result, outputFileName);
     }
