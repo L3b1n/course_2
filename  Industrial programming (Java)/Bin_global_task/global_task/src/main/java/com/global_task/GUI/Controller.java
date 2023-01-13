@@ -57,7 +57,7 @@ public class Controller {
         Alert dialog = new Alert(Alert.AlertType.CONFIRMATION);
         dialog.setTitle("Application instructions");
         dialog.setHeaderText(null);
-        dialog.setContentText("1. Choose a file to work with\n2. Choose actions to open the file which you have chosen (you must choose only needed options in the right order):\n\t• Decompress\n\t• Decode (you must enter decode key of length 16)\n\t• Unzip \n3. If you want to calculate information, click on calculate button\n4. Choose actions to write the file:\n\t• Compress (you must enter compress level in range 0-9)\n\t• Encode (you must enter encode key of length 16)\n\t• Zip\n5. Click on convert button and choose final derictory");
+        dialog.setContentText("1. Choose a file to work with\n2. Choose actions to open the file which you have chosen (you must choose only needed options in the right order):\n\t• Decompress\n\t• Decode (you must enter decode key of length 16)\n\t• Unzip \n3. If you want to calculate information, click on calculate button\n4. Choose actions to write the file:\n\t• Compress (you must enter compress level in range 0-9)\n\t• Encode (you must enter encode key of length 16)\n\t• Zip\n5. Click on convert button and choose final directory");
         dialog.getDialogPane().lookupButton(ButtonType.CANCEL).setVisible(false);
         dialog.showAndWait();
     }
