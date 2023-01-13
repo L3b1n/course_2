@@ -12,20 +12,6 @@
         // },
         {
             "type": "java",
-            "name": "Launch Encryted",
-            "request": "launch",
-            "mainClass": "com.global_task.Encryted",
-            "projectName": "global_task"
-        },
-        {
-            "type": "java",
-            "name": "Launch Zipper",
-            "request": "launch",
-            "mainClass": "com.global_task.Zipper",
-            "projectName": "global_task"
-        },
-        {
-            "type": "java",
             "name": "Server",
             "request": "launch",
             "cwd": "${workspaceFolder}",
