@@ -57,6 +57,7 @@ public class Server {
             }
             if(command.equals("Ca")) {
                 reader = builder.getFileReader();
+                deleteFile(fileName);
                 if(uzippedFileName != null) {
                     fileName = uzippedFileName;
                 }
@@ -95,6 +96,7 @@ public class Server {
             if(command.equals("Zz")) {
                 ZippedFileReader.WriteZipped(fileName, fileName.substring(0, fileName.lastIndexOf('.')) + ".zip");
                 deleteFile(fileName);
+                uzippedFileName = fileName;
                 fileName = fileName.substring(0, fileName.lastIndexOf('.')) + ".zip";
             }
             if(command.equals("Zu")) {
@@ -241,5 +243,9 @@ public class Server {
         } else {
             System.out.println("Failed to delete " + fileName + " file");
         }
+    }
+
+    public String getFileName() {
+        return fileName;
     }
 }
