@@ -6,6 +6,7 @@ import java.io.StringReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -20,6 +21,23 @@ public class JSONFileReader extends FileReaderInfo {
     
     @Override
     public ArrayList<ArrayList<String>> Read() throws Exception {
+        try {
+            ArrayList<ArrayList<String>> readFile = new ArrayList<>();
+            Scanner reader = new Scanner(new FileReader(inputName));
+            while(reader.hasNextLine()) {
+                ArrayList<String> temp = new ArrayList<>();
+                temp.add(reader.nextLine());
+                readFile.add(temp);
+            }
+            reader.close();
+            return readFile;
+        } catch(Exception e) {
+            throw new Exception("Error in JSON file reading. Check selected file, actions and try again.", e);
+        }
+    }
+    
+    @Override
+    public ArrayList<ArrayList<String>> ReadResult() throws Exception {
         try {
             ArrayList<ArrayList<String>> readFile = new ArrayList<>();
             readFile.add(0, new ArrayList<>());
@@ -43,6 +61,24 @@ public class JSONFileReader extends FileReaderInfo {
     @Override
     public ArrayList<ArrayList<String>> Transform(byte[] tempByte) throws Exception {
         try {
+            String tempString = new String(tempByte, StandardCharsets.UTF_8);
+            ArrayList<ArrayList<String>> readFile = new ArrayList<>();
+            Scanner reader = new Scanner(new StringReader(tempString));
+            while(reader.hasNext()) {
+                ArrayList<String> temp = new ArrayList<>();
+                temp.add(reader.nextLine());
+                readFile.add(temp);
+            }
+            reader.close();
+            return readFile;
+        } catch(Exception e) {
+            throw new Exception("Error in JSON file reading. Check selected file, actions and try again.", e);
+        }
+    }
+
+    @Override
+    public ArrayList<ArrayList<String>> TransformResult(byte[] tempByte) throws Exception {
+        try {
             ArrayList<ArrayList<String>> readFile = new ArrayList<>();
             readFile.add(0, new ArrayList<>());
             JSONParser jsonParser = new JSONParser();
@@ -65,7 +101,18 @@ public class JSONFileReader extends FileReaderInfo {
 
     @Override
     public void Write(ArrayList<ArrayList<String>> result, String outputFileName) throws Exception {
-        WriteResult(result, outputFileName);
+        try {
+            FileWriter writer = new FileWriter(outputFileName);
+            for(int i = 0; i < result.size(); i++) {
+                writer.write(result.get(i).get(0));
+                if(i != result.size() - 1) {
+                    writer.write("\n");
+                }
+            }
+            writer.close();
+        } catch(Exception e) {
+            throw new Exception("Error in JSON file write. Check selected file, actions and try again.", e);
+        }
     }
 
     @Override
@@ -121,7 +168,7 @@ public class JSONFileReader extends FileReaderInfo {
     
     @Override
     public void getResult(String outputFileName) throws Exception {
-        ArrayList<ArrayList<String>> readFile = Read();
+        ArrayList<ArrayList<String>> readFile = ReadResult();
         ArrayList<ArrayList<String>> result = Calculate(readFile);
         WriteResult(result, outputFileName);
     }
