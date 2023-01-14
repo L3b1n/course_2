@@ -36,14 +36,6 @@ public class XMLFileReader extends FileReaderInfo {
         return node;
     }
     
-    // private static Node getLanguage(Document doc, ArrayList<String> result) {
-    //     Element line = doc.createElement("expressions");
-    //     for(int i = 0, k = 1; i < result.size(); i++) {
-    //         line.appendChild(getLanguageElements(doc, line, "expression" + Integer.toString(k++), result.get(i)));
-    //     }
-    //     return line;
-    // }
-    
     private static Node getResultLanguage(Document doc, ArrayList<String> result) {
         Element line = doc.createElement("expressions");
         for(int i = 0, k = 1; i < result.size(); i++) {
