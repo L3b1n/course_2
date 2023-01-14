@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.hc.client5.http.classic.methods.HttpGet;
 import org.apache.hc.client5.http.classic.methods.HttpUriRequest;
 import org.apache.hc.client5.http.impl.classic.HttpClientBuilder;
-import org.apache.hc.core5.http.HttpResponse;
 import org.apache.hc.core5.http.HttpStatus;
 
 import java.io.IOException;
@@ -18,7 +17,7 @@ public class Facade
     {
         HttpUriRequest request = new HttpGet( BaseUrl + "add/" + num1 + "/" + num2);
         var httpResponse = HttpClientBuilder.create().build().execute( request );
-        var result = objectMapper.readValue(httpResponse.getEntity().getContent(), Double.class);
+        double result = objectMapper.readValue(httpResponse.getEntity().getContent(), Double.class);
         return result;
     }
 
@@ -26,7 +25,7 @@ public class Facade
     {
         HttpUriRequest request = new HttpGet( BaseUrl + "multiply/" + num1 + "/" + num2);
         var httpResponse = HttpClientBuilder.create().build().execute( request );
-        var result = objectMapper.readValue(httpResponse.getEntity().getContent(), Double.class);
+        double result = objectMapper.readValue(httpResponse.getEntity().getContent(), Double.class);
         return result;
     }
 
@@ -34,7 +33,7 @@ public class Facade
     {
         HttpUriRequest request = new HttpGet( BaseUrl + "minus/" + num1 + "/" + num2);
         var httpResponse = HttpClientBuilder.create().build().execute( request );
-        var result = objectMapper.readValue(httpResponse.getEntity().getContent(), Double.class);
+        double result = objectMapper.readValue(httpResponse.getEntity().getContent(), Double.class);
         return result;
     }
 
@@ -45,7 +44,7 @@ public class Facade
 
         if(httpResponse.getCode() == HttpStatus.SC_BAD_REQUEST){ throw new IllegalArgumentException("Divide by zero");}
 
-        var result = objectMapper.readValue(httpResponse.getEntity().getContent(), Double.class);
+        double result = objectMapper.readValue(httpResponse.getEntity().getContent(), Double.class);
         return result;
     }
 }
