@@ -21,9 +21,19 @@
         },
         {
             "type": "java",
-            "name": "Client",
+            "name": "Client windows",
             "request": "launch",
-            "vmArgs": "--module-path ./libraries/javafx-sdk-19/lib --add-modules javafx.controls,javafx.fxml",
+            "vmArgs": "--module-path ./libraries/windows/javafx-sdk-19/lib --add-modules javafx.controls,javafx.fxml",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.global_task.GUI.Main",
+            "projectName": "global_task",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "Client macOS",
+            "request": "launch",
+            "vmArgs": "--module-path ./libraries/macOS/javafx-sdk-19/lib --add-modules javafx.controls,javafx.fxml",
             "cwd": "${workspaceFolder}",
             "mainClass": "com.global_task.GUI.Main",
             "projectName": "global_task",
@@ -32,8 +42,13 @@
     ],
     "compounds": [
         {
-            "name": "Server/Client",
-            "configurations": ["Server", "Client"],
+            "name": "Server/Client macOS",
+            "configurations": ["Server", "Client macOS"],
+            "stopAll": true
+        },
+        {
+            "name": "Server/Client win",
+            "configurations": ["Server", "Client windows"],
             "stopAll": true
         }
     ]
