@@ -56,7 +56,7 @@ public class TXTFileReader extends FileReaderInfo {
             reader.close();
             return readFile;
         } catch(Exception e) {
-            throw new Exception("Error in TXT file calculating. Check selected file, actions and try again.", e);
+            throw new Exception("Error in TXT file read. Check selected file, actions and try again.", e);
         }
     }
 
