@@ -109,7 +109,7 @@ public class EncryptedFileReader extends FileReader {
     public ArrayList<ArrayList<String>> TransformResult(byte[] tempByte) throws Exception {
         try {
             byte[] decryptByte = Decrypt(key, tempByte);
-            return reader.Transform(decryptByte);
+            return reader.TransformResult(decryptByte);
         } catch(Throwable e) {
             throw new Exception("Error in file decode. Check selected file, actions and try again.", e);
         }
