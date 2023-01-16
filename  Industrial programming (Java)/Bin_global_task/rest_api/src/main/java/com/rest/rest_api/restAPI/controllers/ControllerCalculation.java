@@ -17,10 +17,10 @@ import com.rest.rest_api.mathLogic.contracts.Interface.InterfaceFileReader;
 public class ControllerCalculation {
     @GetMapping("/Calculate")
     public ResponseEntity<FileResponse> Calculate(@RequestParam(value = "input") String inputFile,
-                                          @RequestParam(value = "output") String outputFile,
-                                          @RequestParam(value = "iszipped", required = false) boolean isZipped,
-                                          @RequestParam(value = "iscompressed", required = false) boolean isCompressed,
-                                          @RequestParam(value="decryptkey", required = false) String key) {
+                                                  @RequestParam(value = "output") String outputFile,
+                                                  @RequestParam(value = "iszipped", required = false) boolean isZipped,
+                                                  @RequestParam(value = "iscompressed", required = false) boolean isCompressed,
+                                                  @RequestParam(value="decryptkey", required = false) String key) {
         File file = new File(outputFile);
         try {
             System.out.println(inputFile);
@@ -40,7 +40,7 @@ public class ControllerCalculation {
             System.out.println(e.toString());
             return ResponseEntity.internalServerError().build();
         }
-        FileResponse response = FileResponse.builder().fileName(outputFile).fileSize(file.getTotalSpace()).downloadUri("/download/" + outputFile).build();
+        FileResponse response = FileResponse.builder().fileName(outputFile).fileSize(file.getTotalSpace()).downloadUri(outputFile).build();
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }
