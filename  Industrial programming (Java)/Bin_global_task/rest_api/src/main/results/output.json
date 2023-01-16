@@ -1,0 +1,7 @@
+[
+	{"Result_1":"1.2186948853615522","Result_2":"545.468","Result_3":"18.0"},
+	{"Result_1":"Error: devision by zero","Result_2":"Error: devision by zero","Result_3":"3.0"},
+	{"Result_1":"2.5","Result_2":"Error: devision by zero","Result_3":"2.0"},
+	{"Result_1":"24.0","Result_2":"4.0","Result_3":"7.5"},
+	{"Result_1":"1.0","Result_2":"1.0","Result_3":"3.0"}
+]
