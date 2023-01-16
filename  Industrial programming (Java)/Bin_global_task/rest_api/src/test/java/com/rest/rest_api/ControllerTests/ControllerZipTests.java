@@ -16,13 +16,9 @@ public class ControllerZipTests extends StandartControllerTests {
 
     @AfterAll
     public void deleteFiles() {
-        File json = new File(OUTPUT_TXT);
         File txt = new File(OUTPUT_TXT);
-        File xml = new File(OUTPUT_TXT);
         File zip = new File(OUTPUT_ZIP);
-        json.deleteOnExit();
         txt.deleteOnExit();
-        xml.deleteOnExit();
         zip.deleteOnExit();
     }
 
