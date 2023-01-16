@@ -58,14 +58,14 @@ public class ControllerCalculationTests extends StandartControllerTests {
     @Test
     public void ZipFileCalculate() {
         given().queryParam("input", DEFAULT_ZIP)
-               .queryParam("output", OUTPUT_ZIP)
+               .queryParam("output", OUTPUT_TXT)
                .queryParam("iszipped", true)
                .queryParam("iscompressed", false)
                .queryParam("decryptkey", false)
                .log().all().when().post(Calculate_URL)
                .then().statusCode(200);
 
-        Assertions.assertTrue(new File(OUTPUT_ZIP).exists(), "File " + OUTPUT_ZIP + " didn't uploaded.");
+        Assertions.assertTrue(new File(OUTPUT_TXT).exists(), "File " + OUTPUT_TXT + " didn't uploaded.");
     }
 
     @Test
