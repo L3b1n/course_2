@@ -15,9 +15,9 @@ public class ControllerCalculationTests extends StandartControllerTests {
 
     @AfterAll
     public void deleteFiles() {
-        File json = new File(OUTPUT_TXT);
+        File json = new File(OUTPUT_JSON);
         File txt = new File(OUTPUT_TXT);
-        File xml = new File(OUTPUT_TXT);
+        File xml = new File(OUTPUT_XML);
         File zip = new File(OUTPUT_ZIP);
         json.deleteOnExit();
         txt.deleteOnExit();
