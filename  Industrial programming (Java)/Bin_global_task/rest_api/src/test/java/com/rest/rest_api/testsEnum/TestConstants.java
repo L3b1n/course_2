@@ -17,7 +17,7 @@ public class TestConstants {
     public static final String OUTPUT_TXT = "./src/main/results/defaultOutput.txt";
     public static final String OUTPUT_XML = "./src/main/results/defaultOutput.xml";
     public static final String OUTPUT_JSON = "./src/main/results/defaultOutput.json";
-    public static final String OUTPUT_ZIP = "./src/main/results/defaultOutput.txt";
+    public static final String OUTPUT_ZIP = "./src/main/results/defaultOutput.zip";
 
     public static final String KEY = "squirreldgwndlaj";
 }
