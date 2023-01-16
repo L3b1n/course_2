@@ -10,7 +10,7 @@ import static io.restassured.RestAssured.given;
 
 import static com.rest.rest_api.testsEnum.TestConstants.*;
 
-public class ControllerZipTests {
+public class ControllerZipTests extends StandartControllerTests {
     private static final String Zipped_URL = "/Zipped";
     private static final String Unzip_URL = "/Unzip";
 
