@@ -12,6 +12,6 @@ public class Singleton {
     }
 
     public void getDescription() {
-        System.out.println("\tSingleton conection");
+        System.out.println("\tSingleton connection");
     }
 }
