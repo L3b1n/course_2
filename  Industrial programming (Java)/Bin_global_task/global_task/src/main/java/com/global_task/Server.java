@@ -57,7 +57,6 @@ public class Server {
             }
             if(command.equals("Ca")) {
                 reader = builder.getFileReader();
-                deleteFile(fileName);
                 if(uzippedFileName != null) {
                     fileName = uzippedFileName;
                 }
