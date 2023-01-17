@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Iterator Main",
+            "request": "launch",
+            "mainClass": "com.patterns.Iterator.Main",
+            "projectName": "patterns"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
