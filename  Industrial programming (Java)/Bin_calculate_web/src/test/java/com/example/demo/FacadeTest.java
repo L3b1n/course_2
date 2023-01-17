@@ -1,13 +1,14 @@
 package com.example.demo;
-import org.junit.jupiter.api.Assertions;
+
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
+
+import com.example.demo.Calculator.Facade;
 
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class CalculationFacadeTest {
-
+class CalculationFacadeTest 
+{
     @Test
     void add() throws IOException 
     {
