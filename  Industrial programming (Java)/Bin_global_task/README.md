@@ -1,4 +1,4 @@
-<details><summary>Russian</summary>
+<details><summary><h2><strong>Russian</strong></h2></summary>
 
 ## Общая задача по промышленному программированию
 ### Необходимо реализовать консольное приложение, которое:
@@ -30,7 +30,7 @@
 
 </details>
 
-<details open><summary><big><big><strong>English</strong></big></big></summary>
+<details open><summary><h2><strong>English</strong></h2></summary>
 
 ## General task for industrial programming
 ### You need to implement a console application that:
@@ -42,5 +42,22 @@ The input and output file can be in the following formats: $plain text$, $xml$, 
  
 The "type" of the input and output file is set by the console options.
 The application can be implemented in two ways: without using Design Patterns and using Design Patterns (Decorator and Builder $\dots$ can be designed as a Singleton Builder), compare implementations.
+
+Information processing at the first stage: find all arithmetic operations in the input file and replace them with the results in the output file.
+
+Implement filtering in two ways without using regular expressions and using regular expressions (as well as the third way :) find a library that does everything for you, parsing and calculation, there are more than one). Conduct a comparative analysis of 2 implementation options.
+
+### Next steps for our task:
+ 1. Add UI:
+    * console;
+    * use any Java graphics library of your choice;
+    * compare CLI and UI based implementations;
+    * talk with classmates and compare different Java graphics libraries;
+ 2. Implement logic as a Web Service:
+    * Rest using any Java engine;
+    * SOAP using any Java engine;
+    * Compare Rest and SOAP implementations;
+    * talk with classmates and compare different Rest/Soap Java engines;
+ 3. Connect everything together UI and Web Service;
 
 </details>
