@@ -103,12 +103,12 @@ public class Controller {
         
         Client clientSend = new Client();
         System.out.println("Please wait");
-        clientSend.connectServer(9527);
+        clientSend.connectServer(4444);
         clientSend.sendFile(selectedFile, directoryFile, flag, keys, compressLevel);
         clientSend.stopClient();
         
         Client clientGet = new Client();
-        clientGet.connectServer(9528);
+        clientGet.connectServer(4445);
         String result = clientGet.getResult();
         clientGet.stopClient();
         if(result.length() != 0) {
