@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ExpressionList>
+    <expressions>
+        <Result1>1.2186948853615522</Result1>
+        <Result2>-333.0</Result2>
+        <Result3>12.0</Result3>
+    </expressions>
+    <expressions>
+        <Result1>-29.0</Result1>
+        <Result2>Error: devision by zero</Result2>
+        <Result3>23.0</Result3>
+    </expressions>
+    <expressions>
+        <Result1>-21.333333333333332</Result1>
+        <Result2>-3331.0</Result2>
+        <Result3>12.0</Result3>
+    </expressions>
+    <expressions>
+        <Result1>11.0</Result1>
+        <Result2>-534.0</Result2>
+        <Result3>12.0</Result3>
+    </expressions>
+</ExpressionList>

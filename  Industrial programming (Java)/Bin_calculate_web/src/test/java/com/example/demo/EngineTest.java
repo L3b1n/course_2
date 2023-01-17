@@ -1,14 +1,12 @@
 package com.example.demo;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
-import java.io.IOException;
+import com.example.demo.Calculator.Engine;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class CalculationEngineTest {
-
+class CalculationEngineTest 
+{
     @Test
     void add() 
     {
@@ -16,7 +14,6 @@ class CalculationEngineTest {
         double arg1 = 5.0;
         double arg2 = 7.0;
         var result = Engine.Add(arg1, arg2);
-
         Assertions.assertEquals(expectedResult, result);
     }
 
@@ -27,8 +24,6 @@ class CalculationEngineTest {
         double arg1 = 5.0;
         double arg2 = 7.0;
         var result = Engine.Sub(arg1, arg2);
-
-        // Assert
         Assertions.assertEquals(expectedResult, result);
     }
 

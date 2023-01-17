@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExpressionList>
+    <expressions>
+        <expression1>((12 - 10) + 124 / 567) + 1 - 2</expression1>
+        <expression2>12 - 345</expression2>
+        <expression3>12</expression3>
+    </expressions>
+    <expressions>
+        <expression1>5 - 34</expression1>
+        <expression2>100 / 0</expression2>
+        <expression3>14 + 9</expression3>
+    </expressions>
+    <expressions>
+        <expression1>((2 - 34) * 100) / 150</expression1>
+        <expression2>12 - 3343</expression2>
+        <expression3>12</expression3>
+    </expressions>
+    <expressions>
+        <expression1>12 - 1</expression1>
+        <expression2>12 - 546</expression2>
+        <expression3>12</expression3>
+    </expressions>
+    <expressions>
+        <expression1>12 - 3</expression1>
+        <expression2>23 - 345</expression2>
+        <expression3>12</expression3>
+    </expressions>
+</ExpressionList>

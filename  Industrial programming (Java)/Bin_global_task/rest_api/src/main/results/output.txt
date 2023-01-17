@@ -1,0 +1,3 @@
+Result1 = 545.468
+Result2 = Error: devision by zero
+Result3 = 3.0
