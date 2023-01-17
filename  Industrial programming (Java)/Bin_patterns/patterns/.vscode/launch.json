@@ -1,0 +1,49 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Iterator Main",
+            "request": "launch",
+            "mainClass": "com.patterns.Iterator.Main",
+            "projectName": "patterns"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Adapter Main",
+            "request": "launch",
+            "mainClass": "com.patterns.Adapter.Main",
+            "projectName": "patterns"
+        },
+        {
+            "type": "java",
+            "name": "Composite Main",
+            "request": "launch",
+            "mainClass": "com.patterns.Composite.Main",
+            "projectName": "patterns"
+        },
+        {
+            "type": "java",
+            "name": "Singleton Main",
+            "request": "launch",
+            "mainClass": "com.patterns.Singleton.Main",
+            "projectName": "patterns"
+        },
+        {
+            "type": "java",
+            "name": "TemplateMethod Main",
+            "request": "launch",
+            "mainClass": "com.patterns.TemplateMethod.Main",
+            "projectName": "patterns"
+        }
+    ]
+}
