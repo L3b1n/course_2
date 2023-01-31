@@ -14,6 +14,7 @@
    * [task 20 (Palindrome)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2020%20(Palindrome) "task 20 (Palindrome)")
    * [task 25 (String conversion)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2025%20(string%20conversion) "task 25 (String conversion)")
    * [task 28 (Phone)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2028%20(phone) "task 25 (Phone)")
+   * [task 34.1 (Math lesson)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2034.1%20(math%20lesson) "task 34.1 (Math lesson)")
    * [task 35.2 (Cute pattern)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2035.2%20(cute%20pattern) "task 35.2 (Cute pattern)")
    * [task 69.1 (Frog)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2069.1%20(frog) "task 69.1 (Frog)")
    * [task 82.1 (Dividing sequence)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2082.1%20(dividing%20sequence) "task 82.1 (Dividing sequence")
