@@ -25,7 +25,7 @@ public:
 
     long long Solution(){ return Solution(argument, startValue);}
 
-public:
+private:
     std::vector<int> vec;
     int argument, length, startValue;
     std::unordered_map<int, long long> temp;
