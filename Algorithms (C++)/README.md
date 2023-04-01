@@ -24,17 +24,18 @@
    * [task 69.2 (Frog)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2069.2%20(frog) "task 69.2 (Frog)")
    * [task 82.1 (Dividing sequence)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2082.1%20(dividing%20sequence) "task 82.1 (Dividing sequence")
    * [task 93 (LCS)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2093%20(LCS) "task 93 (LCS)")
-3. Data structures
+3. Data structures:
    * [task 0.2 (Task of sum, sqrt-decomposition)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%200.2%20(task%20of%20sum) "task 0.2 (Task of sum, sqrt-decomposition)")
    * [task 0.3 (Is heap?)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%200.3%20(is%20heap%3F) "task 0.3 (Is heap?)")
    * [task 0.4 (Binomial heap)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%200.4%20(binomial%20heap) "task 0.3 (Binomial heap)")
    * [task 0.5 (Hash table)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%200.5%20(hash%20table) "task 0.5 (Hash table)")
    * [task 0.6 (Segment tree)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%200.6%20(segment%20tree) "task 0.6 (Segment tree)")
+   * [task 21 (Cylinder)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%2021%20(cylinder) "task 21 (Cylinder")
    * [task 22 (Rectangles)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%2022%20(rectangles) "task 22 (Rectangles")
    * [task 34.1 (Math lesson)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%2034.1%20(math%20lesson) "task 34.1 (Math lesson)")
    * [task 43.1 (Coding of Huffman)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%2043.1%20(coding%20of%20huffman) "task 43.1 (Coding of Huffman)")
    * [task 43.2 (Huffman coding)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%2043.2%20(huffman%20coding) "task 43.2 (Huffman coding)")
-4. Graphs
+4. Graphs:
    * [task (Kuhn)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%20(Kuhn) "task (Kuhn)")
    * [task 0.1 (Roads 1)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.1%20(roads%201) "task 0.1 (Roads 1)")
    * [task 0.2 (Easy task of roads destruction)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.2%20(roads%20destruction) "task 0.2 (Easy task of roads destruction")
