@@ -122,5 +122,8 @@
     "**/.*/**",
     "**/.vscode",
     "**/.vscode/**"
+  ],
+  "dataworkspace.excludedProjects": [
+    "test/test.sqlproj"
   ]
 }
