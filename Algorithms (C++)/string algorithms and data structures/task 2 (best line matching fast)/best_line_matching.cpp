@@ -125,7 +125,7 @@ private:
 int main()
 {
     freopen("input.txt", "r", stdin);
-    // freopen("output.txt", "w", stdout);
+    freopen("output.txt", "w", stdout);
     std::ios_base::sync_with_stdio(0);
     std::cin.tie(0);
     std::cout.tie(0);
