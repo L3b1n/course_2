@@ -56,5 +56,5 @@
 5. String algorithms and data structures:
    * [task 0.1 (Shift on prefix function)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/string%20algorithms%20and%20data%20structures/task%200.1%20(shift%20on%20prefix%20function) "task 0.1 (Shift on prefix function)")
    * [task 0.1 (Shift on z-function)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/string%20algorithms%20and%20data%20structures/task%200.1%20(shift%20on%20z-function) "task 0.1 (Shift on z-function)")
-   * [task 0.2 (Suffix array)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/string%20algorithms%20and%20data%20structures/task%200.2%20(suffix%20array) "task 0.2 (Suffix array)")
+   * [task 0.2 (Suffix array), o(NlogN) implementation](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/string%20algorithms%20and%20data%20structures/task%200.2%20(suffix%20array) "task 0.2 (Suffix array), o(NlogN) implementation")
    * [task 2 (Best line matching on recusion)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/string%20algorithms%20and%20data%20structures/task%202%20(best%20line%20matching%20on%20recusion) "task 2 (Best line matching on recusion)")
