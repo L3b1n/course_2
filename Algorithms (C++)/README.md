@@ -40,7 +40,7 @@
 4. Graphs:
    * [task (Kuhn)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%20(Kuhn) "task (Kuhn)")
    * [task 0.1 (Roads 1), DSU](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.1%20(roads%201) "task 0.1 (Roads 1), DSU")
-   * [task 0.2 (Easy task of roads destruction)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.2%20(roads%20destruction) "task 0.2 (Easy task of roads destruction)")
+   * [task 0.2 (Easy task of roads destruction)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.2%20(roads%20destruction) "task 0.2 (Easy task of roads destruction")
    * [task 0.3 (Tough task of roads destruction)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.3%20(roads%20destruction) "task 0.3 (Tough task of roads destruction)")
    * [task 0.4 (Adjacency matrix)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.4%20(adjacency%20matrix) "task 0.4 (Adjacency matrix)")
    * [task 0.5 (Canonical view by arc list)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.5%20(canonical%20view%20by%20arc%20list) "task 0.5 (Canonical view by arc list")
