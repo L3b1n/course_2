@@ -54,7 +54,7 @@
    * [task 0.12 (Maximal flow hard), Dinic's algorithm](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.12%20(Maximal%20flow%20hard) "task 0.12 (Maximal flow hard), Dinic's algorithm")
    * [task 20 (Without left turns)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%2020%20(without%20left%20turns) "task 20 (Without left turns)")
    * [task 21 (Shortest rout with additional time to overcome intersections)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%2021%20(Shertest%20rout%20with%20overcome%20intersections) "task 21 (Shortest rout with additional time to overcome intersections)")
-   * [task 55 (Reliable network), max min flow](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%2021%20(Shertest%20rout%20with%20overcome%20intersections) "task 55 (Reliable network), max min flow")
+   * [task 55 (Reliable network), max min flow](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%2055%20(reliable%20network)) "task 55 (Reliable network), max min flow")
 5. String algorithms and data structures:
    * [task 0.1 (Shift on prefix function)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/string%20algorithms%20and%20data%20structures/task%200.1%20(shift%20on%20prefix%20function) "task 0.1 (Shift on prefix function)")
    * [task 0.1 (Shift on z-function)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/string%20algorithms%20and%20data%20structures/task%200.1%20(shift%20on%20z-function) "task 0.1 (Shift on z-function)")
