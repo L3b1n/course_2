@@ -132,7 +132,7 @@ public:
         ) / 2;
         // std::copy(sortedSummit.begin(), sortedSummit.end(), std::ostream_iterator<std::pair<int, int>>(std::cout, "\n")); std::cout << "\n\n";
         // std::copy(inputSummit.begin(), inputSummit.end(), std::ostream_iterator<std::pair<int, std::string>>(std::cout, " ")); std::cout << "\n\n";
-        // for(int i = 0; i < countSummit + 1; ++i){ if(summit[i] != -1){ printf("%d %d\n", summit[i], i);}}
+        // for(int i = 0; i < countSummit + 1; ++i){ if(summit[i] != -1){ printf("%d %d\n", summit[i], i);}} 
 	}
 
 private:
