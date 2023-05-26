@@ -63,3 +63,5 @@
    * [task 0.2 (Suffix array), o(NlogN) implementation](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/string%20algorithms%20and%20data%20structures/task%200.2%20(suffix%20array) "task 0.2 (Suffix array), o(NlogN) implementation")
    * [task 2 (Best line matching fast), Fast Fourier transform](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/string%20algorithms%20and%20data%20structures/task%202%20(best%20line%20matching%20fast) "task 2 (Best line matching fast), Fast Fourier transform")
    * [task 2 (Best line matching on recusion), Fast Fourier transform](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/string%20algorithms%20and%20data%20structures/task%202%20(best%20line%20matching%20on%20recusion) "task 2 (Best line matching on recusion), Fast Fourier transform")
+6. Approximate:
+   * [task 8 (Tracks and stones)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/approximate/task%208%20(trucks%20and%20stones) "task 8 (Trucks and stones)")
