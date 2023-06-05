@@ -68,4 +68,5 @@
    * [task 13 (Sum of vectors)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/approximate/task%2013%20(sum%20of%20vectors) "task 13 (Sum of vectors)")
 7. Enumeration:
    * [task 19 (Graph coloring)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Enumeration/task%2019%20(graph%20coloring) "task 19 (Graph coloring)")
+   * [task 29 (Job-shop)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Enumeration/task%2029%20(Job-shop) "task 29 (Job-shop)")
    * [task 36 (Graph isomorphism)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Enumeration/task%2036%20(graph%20isomorphism) "task 36 (Graph isomorphism)")
