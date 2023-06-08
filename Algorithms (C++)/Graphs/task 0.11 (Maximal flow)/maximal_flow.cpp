@@ -124,9 +124,9 @@ private:
 
 int main()
 {
-    std::ios_base::sync_with_stdio(0);
     std::freopen("input.txt", "r", stdin);
     // std::freopen("output.txt", "w", stdout);
+    std::ios_base::sync_with_stdio(0);
     std::cin.tie(0);
     std::cout.tie(0);
     MaximalFlow maximalFlow;
