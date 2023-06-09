@@ -15,7 +15,7 @@ struct Vector
 
 double distance(const Vector& v1, const Vector& v2)
 {
-    double dist = 0.0;
+    double dist = 0.;
     for(int i = 0; i < v1.coordinates.size(); ++i){ double diff = v1.coordinates[i] - v2.coordinates[i]; dist += diff * diff;}
     return std::sqrt(dist);
 }
