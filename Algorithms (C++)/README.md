@@ -26,7 +26,7 @@
    * [task 93 (LCS)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2093%20(LCS) "task 93 (LCS)")
 3. Data structures:
    * [task 0.2 (Task of sum, sqrt-decomposition)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Data%20structures/task%200.2%20(task%20of%20sum) "task 0.2 (Task of sum, sqrt-decomposition)")
-   * [task 0.3 (Is heap?)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%200.3%20(is%20heap%3F) "task 0.3 (Is heap?)")
+   * [task 0.3 (Is heap?)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Data%20structures/task%200.3%20(is%20heap%3F) "task 0.3 (Is heap?)")
    * [task 0.4 (Binomial heap)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%200.4%20(binomial%20heap) "task 0.3 (Binomial heap)")
    * [task 0.5 (Hash table)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%200.5%20(hash%20table) "task 0.5 (Hash table)")
    * [task 0.6 (Segment tree)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%200.6%20(segment%20tree) "task 0.6 (Segment tree)")
