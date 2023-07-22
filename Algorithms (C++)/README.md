@@ -34,7 +34,7 @@
    * [task 22 (Rectangles)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Data%20structures/task%2022%20(rectangles) "task 22 (Rectangles)")
    * [task 30 (Flood It on recusion)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Data%20structures/task%2030%20(Flood%20It%20on%20recursion) "task 30 (Flood It on recusion)")
    * [task 30 (Flood It)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Data%20structures/task%2030%20(Flood%20It) "task 30 (Flood It)")
-   * [task 34.1 (Math lesson)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%2034.1%20(math%20lesson) "task 34.1 (Math lesson)")
+   * [task 34.1 (Math lesson)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Data%20structures/task%2034.1%20(math%20lesson) "task 34.1 (Math lesson)")
    * [task 43.1 (Coding of Huffman)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%2043.1%20(coding%20of%20huffman) "task 43.1 (Coding of Huffman)")
    * [task 43.2 (Huffman coding)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/data%20structures/task%2043.2%20(huffman%20coding) "task 43.2 (Huffman coding)")
 4. Graphs:
