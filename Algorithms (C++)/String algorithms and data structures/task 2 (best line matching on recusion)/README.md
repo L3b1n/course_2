@@ -28,5 +28,12 @@
             </td>
             <td valign="top">4 1</td>
         </tr>
+        <tr>
+            <td>16
+                BCBCCDDACBDBBCBA<br>
+                CBCADBBDCBCBBBBB<br>
+            </td>
+            <td valign="top">8 3</td>
+        </tr>
     </tbody>
 </table>
