@@ -57,7 +57,7 @@
    * [task 55 (Reliable network), max min flow](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%2055%20(reliable%20network) "task 55 (Reliable network), max min flow")
    * [task 64 (Crime house), kuhn](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%2064%20(crime%20house) "task 64 (Crime house), kuhn")
 5. String algorithms and data structures:
-   * [task 0.1 (Shift on prefix function)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/string%20algorithms%20and%20data%20structures/task%200.1%20(shift%20on%20prefix%20function) "task 0.1 (Shift on prefix function)")
+   * [task 0.1 (Shift on prefix function)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/String%20algorithms%20and%20data%20structures/task%200.1%20(shift%20on%20prefix%20function) "task 0.1 (Shift on prefix function)")
    * [task 0.1 (Shift on z-function)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/string%20algorithms%20and%20data%20structures/task%200.1%20(shift%20on%20z-function) "task 0.1 (Shift on z-function)")
    * [task 0.2 (Fast suffix array), o(N) implementation](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/string%20algorithms%20and%20data%20structures/task%200.2%20(fast%20suffix%20array) "task 0.2 (Fast suffix array), o(N) implementation")
    * [task 0.2 (Suffix array), o(NlogN) implementation](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/string%20algorithms%20and%20data%20structures/task%200.2%20(suffix%20array) "task 0.2 (Suffix array), o(NlogN) implementation")
