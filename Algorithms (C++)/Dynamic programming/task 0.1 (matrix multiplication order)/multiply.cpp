@@ -4,8 +4,6 @@
 #include <iterator>
 #include <vector>
 
-using namespace std;
-
 struct Matr
 {
     Matr(int _size = 0) : size(_size) { num.resize(size);}
@@ -48,18 +46,22 @@ struct Matr
 
 private:
     int size;
-    vector<pair<int, int>> num;
-    vector<vector<int>> arr;
+    std::vector<std::vector<int>> arr;
+    std::vector<std::pair<int, int>> num;
 };
 
 int main()
 {
+    freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
+    std::ios_base::sync_with_stdio(0);
+    std::cin.tie(0);
+    std::cout.tie(0);
     int n;
-    ifstream fi("input.txt", ios::out);
-    ofstream out("output.txt");
-    fi >> n;
+    std::cin >> n;
     Matr a(n);
-    fi >> a; a.Resize();
-    out << a.Solution();
+    std::cin >> a; 
+    a.Resize();
+    std::cout << a.Solution();
     return 0;
 }
