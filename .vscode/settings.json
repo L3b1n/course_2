@@ -109,7 +109,9 @@
     "source_location": "cpp",
     "ranges": "cpp",
     "shared_mutex": "cpp",
-    "syncstream": "cpp"
+    "syncstream": "cpp",
+    "__bits": "cpp",
+    "__verbose_abort": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "gcc",
