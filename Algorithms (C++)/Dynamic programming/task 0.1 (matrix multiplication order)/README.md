@@ -20,7 +20,7 @@
 <table>
     <thead>
         <tr>
-            <th align="center">input.txt</th>
+            <th align="center">input.txt</th> 
             <th align="center">output.txt</th>
         </tr>
     </thead>
