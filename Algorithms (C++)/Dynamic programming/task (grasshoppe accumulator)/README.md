@@ -24,10 +24,34 @@
     </thead>
     <tbody>
         <tr>
+            <td>6<br>
+                1 2 5 10 20 50<br>
+            </td>
+            <td valign="top">51</td>
+        </tr>
+        <tr>
+            <td>7<br>
+                1 3 5 7 9 11 13<br>
+            </td>
+            <td valign="top">-2023</td>
+        </tr>
+        <tr>
+            <td>11<br>
+                9 0 2 0 4 5 1 0 -1 0 7<br>
+            </td>
+            <td valign="top">21</td>
+        </tr>
+        <tr>
             <td>5<br>
                 -1000000000 1 -999999999 100 -2<br>
             </td>
             <td valign="top">-2000000001</td>
+        </tr>
+        <tr>
+            <td>2<br>
+                10 20<br>
+            </td>
+            <td valign="top">-2023</td>
         </tr>
     </tbody>
 </table>
