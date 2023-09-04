@@ -30,6 +30,38 @@
     </thead>
     <tbody>
         <tr>
+            <td>2<br>
+                20 24<br>
+            </td>
+            <td valign="top">20<br>
+                             2 1<br>
+            </td>
+        </tr>
+        <tr>
+            <td>6<br>
+                0 0 0 0 0 0<br>
+            </td>
+            <td valign="top">0<br>
+                             6 5 4 3 2 1<br>
+            </td>
+        </tr>
+        <tr>
+            <td>1<br>
+                998244353<br>
+            </td>
+            <td valign="top">0<br>
+                             1<br>
+            </td>
+        </tr>
+        <tr>
+            <td>5<br>
+                1 1 1 1 1<br>
+            </td>
+            <td valign="top">1000000115<br>
+                             5 4 3 2 1<br>
+            </td>
+        </tr>
+        <tr>
             <td>4<br>
                 298779738 125828007 868126181 357191561<br>
             </td>
