@@ -75,7 +75,7 @@ int main()
     for(int i = 0, temp; i < n; i++){ std::cin >> temp; mas.push_back(temp);}
     std::cin >> k;
     std::vector<int> test = { std::istream_iterator<int>(std::cin), std::istream_iterator<int>()};
-    vector<int>::const_iterator beg = mas.begin();
+    std::vector<int>::const_iterator beg = mas.begin();
     for(int i = 0; i < k; i++)
     {
         std::cout << dma::binary_search(mas, test[i]) << " " << std::distance(beg, dma::lower_bound(mas, test[i])) << " " << std::distance(beg, dma::upper_bound(mas, test[i])) << "\n";
