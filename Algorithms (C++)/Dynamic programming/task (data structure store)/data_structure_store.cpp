@@ -6,7 +6,7 @@
 
 namespace dma
 {
-    static const int modulus = 1000000007;
+    static const int modulus = 1000000007; 
 }
 
 class Store
