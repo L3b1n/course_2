@@ -28,6 +28,12 @@ b_0 f(\frac{n}{2}) + b_1 f(\frac{n}{2} - 1) + b_2 f(\frac{n}{2} - 2) + \ldots + 
     </thead>
     <tbody>
         <tr>
+            <td>32 1 0<br>
+                16<br>
+            </td>
+            <td valign="top">1048576</td>
+        </tr>
+        <tr>
             <td>2023 3 6<br>
                 998 244 353<br>
             </td>
