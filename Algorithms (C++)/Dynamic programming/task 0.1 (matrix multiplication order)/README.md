@@ -20,11 +20,19 @@
 <table>
     <thead>
         <tr>
-            <th align="center">input.txt</th>
+            <th align="center">input.txt</th> 
             <th align="center">output.txt</th>
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td>3<br>
+                2 3<br>
+                3 5<br>
+                5 10<br>
+            </td>
+            <td valign="top">130</td>
+        </tr>
         <tr>
             <td>4<br>
                 20 5<br>
@@ -36,3 +44,9 @@
         </tr>
     </tbody>
 </table>
+
+# Note
+В первом примере можно умножать двумя способами:
+ * $(A_1(A_2A_3))$: требуется $3 × 5 × 10 + 2 × 3 × 10 = 150 + 60 = 210$ операций;
+ * $((A_1A_2)A_3)$: требуется $2 × 3 × 5 + 2 × 5 × 10 = 30 + 100 = 130$ операций.
+Второй способ эффективнее.
