@@ -8,7 +8,7 @@ int main()
 {
     std::ios_base::sync_with_stdio(0);
     freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
+    freopen("output.txt", "w", stdout); 
     std::cin.tie(0);
     std::cout.tie(0);
     int k, n, l, i = 0;

@@ -13,3 +13,20 @@
 # Формат выходных данных
 
 Выведите максимальное число $l$ файлов $(гарантируется, что $l \le 2 147 483 647)$.
+
+# Пример
+<table>
+    <thead>
+        <tr>
+            <th align="center">input.txt</th>
+            <th align="center">output.txt</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>3 5
+            </td>
+            <td valign="top">696</td>
+        </tr>
+    </tbody>
+</table>
