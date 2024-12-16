@@ -1,7 +1,7 @@
 1. BinaryTree:
-   * [task 0.0](./BinaryTree/task%200.0 "task 0.0") 
+   * [task 0.0](./BinaryTree/task%200.0/ "task 0.0") 
    * [task 0.1 (Build tree)](./BinaryTree/task%200.1/ "task 0.1 (Build tree)")
-   * [task 0.2 (Remove from tree)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/BinaryTree/task%200.2%20(Remove%20from%20tree) "task 0.2 (Remove from tree)")
+   * [task 0.2 (Remove from tree)](./BinaryTree/task%200.2%20(Remove%20from%20tree)/ "task 0.2 (Remove from tree)")
    * [task 0.3 (Is the binary tree searchable?)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/BinaryTree/task%200.3%20(is%20the%20binary%20tree%20searchable%3F) "task 0.3 (Is the binary tree searchable?)")
    * [task 2](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/BinaryTree/task%202 "task 2")
    * [task 18](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/BinaryTree/task_18 "task 18")
