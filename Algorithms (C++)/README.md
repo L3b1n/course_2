@@ -4,7 +4,7 @@
    * [task 0.2 (Remove from tree)](./BinaryTree/task%200.2%20(Remove%20from%20tree)/ "task 0.2 (Remove from tree)")
    * [task 0.3 (Is the binary tree searchable?)](./BinaryTree/task%200.3%20(is%20the%20binary%20tree%20searchable?)/ "task 0.3 (Is the binary tree searchable?)")
    * [task 2](./BinaryTree/task%202/ "task 2")
-   * [task 18](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/BinaryTree/task_18 "task 18")
+   * [task 18](./BinaryTree/task_18/ "task 18")
 2. Dynamic programming:
    * [task (Data structure store)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%20(data%20structure%20store) "task (Data structure store)")
    * [task (Given function)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%20(given%20a%20function) "task (Given function)")
