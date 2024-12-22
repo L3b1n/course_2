@@ -8,7 +8,7 @@
 2. Dynamic programming:
    * [task (Data structure store)](./Dynamic%20programming/task%20(data%20structure%20store)/ "task (Data structure store)")
    * [task (Given function)](./Dynamic%20programming/task%20(given%20a%20function)/ "task (Given function)")
-   * [task (Grasshoppe accumulator)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%20(grasshoppe%20accumulator) "task (Grasshope accumulator)")
+   * [task (Grasshoppe accumulator)](./Dynamic%20programming/task%20(grasshoppe%20accumulator)/ "task (Grasshope accumulator)")
    * [task 0.1 (Binary search)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%200.1%20(binary%20search) "task 0.1 (Binary search)")
    * [task 0.1 (Matrix multiplication order)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%200.1%20(matrix%20multiplication%20order) "task 0.1 (Matrix multiplication order)")
    * [task 0.2 (Combination part 1)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%200.2%20(combination%20(1%20part)) "task 0.2 (Combination part 1)")
