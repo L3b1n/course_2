@@ -11,7 +11,7 @@
    * [task (Grasshoppe accumulator)](./Dynamic%20programming/task%20(grasshoppe%20accumulator)/ "task (Grasshope accumulator)")
    * [task 0.1 (Binary search)](./Dynamic%20programming/task%200.1%20(binary%20search)/ "task 0.1 (Binary search)")
    * [task 0.1 (Matrix multiplication order)](./Dynamic%20programming/task%200.1%20(matrix%20multiplication%20order)/ "task 0.1 (Matrix multiplication order)")
-   * [task 0.2 (Combination part 1)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%200.2%20(combination%20(1%20part)) "task 0.2 (Combination part 1)")
+   * [task 0.2 (Combination part 1)](./Dynamic%20programming/task%200.2%20(combination%20(1%20part))/ "task 0.2 (Combination part 1)")
    * [task 0.3 (Combination part 2)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%200.3%20(combination%20(2%20part)) "task 0.3 (Combination part 3)")
    * [task 6 (Strictly increasing sequence without gaps)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%206%20(strictly%20increasing%20sequence%20without%20gaps) "task 6 (Strictly increasing sequence without gaps)")
    * [task 18 (Files)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2018%20(files) "task 18 (Files)")
