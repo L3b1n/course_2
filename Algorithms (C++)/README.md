@@ -15,7 +15,7 @@
    * [task 0.3 (Combination part 2)](./Dynamic%20programming/task%200.3%20(combination%20(2%20part))/ "task 0.3 (Combination part 3)")
    * [task 6 (Strictly increasing sequence without gaps)](./Dynamic%20programming/task%206%20(strictly%20increasing%20sequence%20without%20gaps)/ "task 6 (Strictly increasing sequence without gaps)")
    * [task 18 (Files)](./Dynamic%20programming/task%2018%20(files)/ "task 18 (Files)")
-   * [task 20 (Palindrome)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2020%20(Palindrome) "task 20 (Palindrome)")
+   * [task 20 (Palindrome)](./Dynamic%20programming/task%2020%20(Palindrome)/ "task 20 (Palindrome)")
    * [task 25 (String conversion)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2025%20(string%20conversion) "task 25 (String conversion)")
    * [task 28 (Phone)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2028%20(phone) "task 25 (Phone)")
    * [task 35.2 (Cute pattern)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2035.2%20(cute%20pattern) "task 35.2 (Cute pattern)")
