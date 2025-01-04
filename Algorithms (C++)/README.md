@@ -21,7 +21,7 @@
    * [task 35.2 (Cute pattern)](./Dynamic%20programming/task%2035.2%20(cute%20pattern)/ "task 35.2 (Cute pattern)")
    * [task 62 (Microchip)](./Dynamic%20programming/task%2062%20(microchip)/ "task 62 (Microchip)")
    * [task 69.1 (Frog)](./Dynamic%20programming/task%2069.1%20(frog)/ "task 69.1 (Frog)")
-   * [task 69.2 (Frog)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2069.2%20(frog) "task 69.2 (Frog)")
+   * [task 69.2 (Frog)](./Dynamic%20programming/task%2069.2%20(frog)/ "task 69.2 (Frog)")
    * [task 82.1 (Dividing sequence)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2082.1%20(dividing%20sequence) "task 82.1 (Dividing sequence)")
    * [task 93 (LCS)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/dynamic%20programming/task%2093%20(LCS) "task 93 (LCS)")
 3. Data structures:
