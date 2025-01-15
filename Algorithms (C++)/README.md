@@ -31,7 +31,7 @@
    * [task 0.5 (Hash table)](./Data%20structures/task%200.5%20(hash%20table)/ "task 0.5 (Hash table)")
    * [task 0.6 (Segment tree)](./Data%20structures/task%200.6%20(segment%20tree)/ "task 0.6 (Segment tree)")
    * [task 21 (Cylinder)](./Data%20structures/task%2021%20(cylinder)/ "task 21 (Cylinder)")
-   * [task 22 (Rectangles)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Data%20structures/task%2022%20(rectangles) "task 22 (Rectangles)")
+   * [task 22 (Rectangles)](./Data%20structures/task%2022%20(rectangles)/ "task 22 (Rectangles)")
    * [task 30 (Flood It on recusion)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Data%20structures/task%2030%20(Flood%20It%20on%20recursion) "task 30 (Flood It on recusion)")
    * [task 30 (Flood It)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Data%20structures/task%2030%20(Flood%20It) "task 30 (Flood It)")
    * [task 34.1 (Math lesson)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Data%20structures/task%2034.1%20(math%20lesson) "task 34.1 (Math lesson)")
