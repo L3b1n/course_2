@@ -42,7 +42,7 @@
    * [task (Max min flow)](./Graphs/task%20(Max%20min%20flow)/ "task (Max min flow)")
    * [task 0.1 (Roads 1), DSU](./Graphs/task%200.1%20(roads%201)/ "task 0.1 (Roads 1), DSU")
    * [task 0.2 (Easy task of roads destruction), DSU](./Graphs/task%200.2%20(roads%20destruction)/ "task 0.2 (Easy task of roads destruction), DSU")
-   * [task 0.3 (Tough task of roads destruction), DSU](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.3%20(roads%20destruction) "task 0.3 (Tough task of roads destruction), DSU")
+   * [task 0.3 (Tough task of roads destruction), DSU](./Graphs/task%200.3%20(roads%20destruction)/ "task 0.3 (Tough task of roads destruction), DSU")
    * [task 0.4 (Adjacency matrix)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.4%20(adjacency%20matrix) "task 0.4 (Adjacency matrix)")
    * [task 0.5 (Canonical view by arc list)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.5%20(canonical%20view%20by%20arc%20list) "task 0.5 (Canonical view by arc list)")
    * [task 0.6 (Build an adjacency list)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%200.6%20(build%20an%20adjacency%20list) "task 0.6 (Build an adjacency list)")
