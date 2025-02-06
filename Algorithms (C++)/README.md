@@ -53,7 +53,7 @@
    * [task 0.11 (Maximal flow), Ford-Fulkerson algorithm](./Graphs/task%200.11%20(Maximal%20flow)/ "task 0.11 (Maximal flow), Ford-Fulkerson algorithm")
    * [task 0.12 (Maximal flow hard), Dinic's algorithm](./Graphs/task%200.12%20(Maximal%20flow%20hard)/ "task 0.12 (Maximal flow hard), Dinic's algorithm")
    * [task 20 (Without left turns)](./Graphs/task%2020%20(without%20left%20turns)/ "task 20 (Without left turns)")
-   * [task 21 (Shortest rout with additional time to overcome intersections)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%2021%20(Shertest%20rout%20with%20overcome%20intersections) "task 21 (Shortest rout with additional time to overcome intersections)")
+   * [task 21 (Shortest rout with additional time to overcome intersections)](./Graphs/task%2021%20(Shertest%20rout%20with%20overcome%20intersections)/ "task 21 (Shortest rout with additional time to overcome intersections)")
    * [task 55 (Reliable network), max min flow](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%2055%20(reliable%20network) "task 55 (Reliable network), max min flow")
    * [task 64 (Crime house), kuhn](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Graphs/task%2064%20(crime%20house) "task 64 (Crime house), kuhn")
 5. String algorithms and data structures:
