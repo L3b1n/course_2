@@ -61,7 +61,7 @@
    * [task 0.1 (Shift on z-function)](./String%20algorithms%20and%20data%20structures/task%200.1%20(shift%20on%20z-function)/ "task 0.1 (Shift on z-function)")
    * [task 0.2 (Fast suffix array), o(N) implementation](./String%20algorithms%20and%20data%20structures/task%200.2%20(fast%20suffix%20array)/ "task 0.2 (Fast suffix array), o(N) implementation")
    * [task 0.2 (Suffix array), o(NlogN) implementation](./String%20algorithms%20and%20data%20structures/task%200.2%20(suffix%20array)/ "task 0.2 (Suffix array), o(NlogN) implementation")
-   * [task 2 (Best line matching fast), Fast Fourier transform](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/String%20algorithms%20and%20data%20structures/task%202%20(best%20line%20matching%20fast) "task 2 (Best line matching fast), Fast Fourier transform")
+   * [task 2 (Best line matching fast), Fast Fourier transform](./String%20algorithms%20and%20data%20structures/task%202%20(best%20line%20matching%20fast)/ "task 2 (Best line matching fast), Fast Fourier transform")
    * [task 2 (Best line matching on recusion), Fast Fourier transform](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/String%20algorithms%20and%20data%20structures/task%202%20(best%20line%20matching%20on%20recusion) "task 2 (Best line matching on recusion), Fast Fourier transform")
 6. Approximate:
    * [task 8 (Tracks and stones)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Approximate/task%208%20(trucks%20and%20stones) "task 8 (Trucks and stones)")
