@@ -64,7 +64,7 @@
    * [task 2 (Best line matching fast), Fast Fourier transform](./String%20algorithms%20and%20data%20structures/task%202%20(best%20line%20matching%20fast)/ "task 2 (Best line matching fast), Fast Fourier transform")
    * [task 2 (Best line matching on recusion), Fast Fourier transform](./String%20algorithms%20and%20data%20structures/task%202%20(best%20line%20matching%20on%20recusion)/ "task 2 (Best line matching on recusion), Fast Fourier transform")
 6. Approximate:
-   * [task 8 (Tracks and stones)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Approximate/task%208%20(trucks%20and%20stones) "task 8 (Trucks and stones)")
+   * [task 8 (Tracks and stones)](./Approximate/task%208%20(trucks%20and%20stones)/ "task 8 (Trucks and stones)")
    * [task 13 (Sum of vectors)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Approximate/task%2013%20(sum%20of%20vectors) "task 13 (Sum of vectors)")
 7. Enumeration:
    * [task 19 (Graph coloring)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Enumeration/task%2019%20(graph%20coloring) "task 19 (Graph coloring)")
