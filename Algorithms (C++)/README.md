@@ -67,6 +67,6 @@
    * [task 8 (Tracks and stones)](./Approximate/task%208%20(trucks%20and%20stones)/ "task 8 (Trucks and stones)")
    * [task 13 (Sum of vectors)](./Approximate/task%2013%20(sum%20of%20vectors)/ "task 13 (Sum of vectors)")
 7. Enumeration:
-   * [task 19 (Graph coloring)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Enumeration/task%2019%20(graph%20coloring) "task 19 (Graph coloring)")
+   * [task 19 (Graph coloring)](./Enumeration/task%2019%20(graph%20coloring)/ "task 19 (Graph coloring)")
    * [task 29 (Job-shop)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Enumeration/task%2029%20(Job-shop) "task 29 (Job-shop)")
-   * [task 36 (Graph isomorphism)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Enumeration/task%2036%20(graph%20isomorphism) "task 36 (Graph isomorphism)")
+   * [task 36 (Graph isomorphism)](https://github.com/L3b1n/course_2/tree/main/Algorithms%20(C%2B%2B)/Enumeration/task%2036%20(graph%20isomorphism) "task 36 (Graph isomorphism)")tel:375295697594
