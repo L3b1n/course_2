@@ -1,0 +1,1 @@
+DROP TABLE Archive, BorrowedBooks, Books, Catalogs
